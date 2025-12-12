@@ -28,7 +28,7 @@ jobs:
     - name: Install Vulkan SDK (macOS)
       if: matrix.os == 'macos-latest'
       run: |
-        brew install vulkan-sdk
+        brew install --cask vulkan-sdk
 
     - name: Install Vulkan SDK (Windows)
       if: matrix.os == 'windows-latest'
