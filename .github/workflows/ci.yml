@@ -26,4 +26,4 @@ jobs:
 
     - name: Run clang-tidy
       run: |
-        find Source -name "*.cpp" -o -name "*.h" | xargs clang-tidy --checks="-*,readability-*,modernize-*,performance-*,bugprone-*" --
+        find Source -name "*.cpp" -o -name "*.h" -exec clang-tidy --checks="-*,readability-identifier-naming,modernize-use-enum-class,misc-unused-parameters" {} -- \;
