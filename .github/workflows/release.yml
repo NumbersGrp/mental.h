@@ -48,7 +48,7 @@ jobs:
       if: matrix.os == 'ubuntu-latest'
       run: |
         sudo apt-get update
-        sudo apt-get install -y libvulkan-dev vulkan-tools vulkan-validationlayers-dev spirv-tools
+        sudo apt-get install -y libvulkan-dev vulkan-tools vulkan-utility-libraries-dev spirv-tools
 
     - name: Install Vulkan SDK (macOS)
       if: matrix.os == 'macos-latest'
