@@ -1,6 +1,7 @@
-#include <iostream>
 #include <spdlog/spdlog.h>
 #include <vulkan/vulkan.h>
+
+#include <iostream>
 
 enum MentalRendererType {
   MENTAL_RENDERER_TYPE_OPENGL = 0,
