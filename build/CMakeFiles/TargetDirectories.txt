@@ -1,0 +1,7 @@
+/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/mental_engine.dir
+/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/edit_cache.dir
+/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/rebuild_cache.dir
+/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/list_install_components.dir
+/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/install.dir
+/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/install/local.dir
+/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/install/strip.dir
