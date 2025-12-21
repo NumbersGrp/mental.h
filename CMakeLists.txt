@@ -96,13 +96,66 @@ endif()
 # Collect source files
 file(GLOB_RECURSE CPP_SOURCES "Source/*.cpp")
 file(GLOB_RECURSE C_SOURCES "Source/*.c")
+
+# Remove example files from main build
+list(REMOVE_ITEM CPP_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/Source/example_mentalsdk.cpp")
+list(REMOVE_ITEM CPP_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/Source/example_smooth_camera.cpp")
+list(REMOVE_ITEM CPP_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/Source/example_triangle.cpp")
+list(REMOVE_ITEM CPP_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/Source/example_multiple_triangles.cpp")
+list(REMOVE_ITEM CPP_SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/Source/example_root_node.cpp")
+
 set(ALL_SOURCES ${CPP_SOURCES} ${C_SOURCES})
 
-# Create executable
+# Create main executable
 add_executable(${PROJECT_NAME} ${ALL_SOURCES})
+
+# Create example executable
+add_executable(${PROJECT_NAME}_Example Source/example_mentalsdk.cpp Source/mentalsdk.cpp)
+
+# Create smooth camera example executable
+add_executable(${PROJECT_NAME}_SmoothCamera Source/example_smooth_camera.cpp Source/mentalsdk.cpp)
+
+# Create triangle example executable
+add_executable(${PROJECT_NAME}_Triangle Source/example_triangle.cpp Source/mentalsdk.cpp)
+
+# Create multiple triangles example executable
+add_executable(${PROJECT_NAME}_MultiTriangles Source/example_multiple_triangles.cpp Source/mentalsdk.cpp)
+
+# Create root node scene example executable
+add_executable(${PROJECT_NAME}_RootNode Source/example_root_node.cpp Source/mentalsdk.cpp)
 
 # Include directories
 target_include_directories(${PROJECT_NAME} PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/Source
+    ${Vulkan_INCLUDE_DIRS}
+)
+
+# Include directories for example
+target_include_directories(${PROJECT_NAME}_Example PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/Source
+    ${Vulkan_INCLUDE_DIRS}
+)
+
+# Include directories for smooth camera example
+target_include_directories(${PROJECT_NAME}_SmoothCamera PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/Source
+    ${Vulkan_INCLUDE_DIRS}
+)
+
+# Include directories for triangle example
+target_include_directories(${PROJECT_NAME}_Triangle PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/Source
+    ${Vulkan_INCLUDE_DIRS}
+)
+
+# Include directories for multiple triangles example
+target_include_directories(${PROJECT_NAME}_MultiTriangles PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/Source
+    ${Vulkan_INCLUDE_DIRS}
+)
+
+# Include directories for root node example
+target_include_directories(${PROJECT_NAME}_RootNode PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/Source
     ${Vulkan_INCLUDE_DIRS}
 )
@@ -116,6 +169,46 @@ if(APPLE)
         OUTPUT_STRIP_TRAILING_WHITESPACE
     )
     target_include_directories(${PROJECT_NAME} PRIVATE 
+        ${GLFW_INCLUDE_DIRS}
+        ${SPDLOG_INCLUDE_DIRS}
+        ${GLEW_INCLUDE_DIRS}
+        ${LUA_INCLUDE_DIRS}
+        "${VULKAN_HEADERS_PREFIX}/include"
+    )
+    
+    target_include_directories(${PROJECT_NAME}_Example PRIVATE 
+        ${GLFW_INCLUDE_DIRS}
+        ${SPDLOG_INCLUDE_DIRS}
+        ${GLEW_INCLUDE_DIRS}
+        ${LUA_INCLUDE_DIRS}
+        "${VULKAN_HEADERS_PREFIX}/include"
+    )
+    
+    target_include_directories(${PROJECT_NAME}_SmoothCamera PRIVATE 
+        ${GLFW_INCLUDE_DIRS}
+        ${SPDLOG_INCLUDE_DIRS}
+        ${GLEW_INCLUDE_DIRS}
+        ${LUA_INCLUDE_DIRS}
+        "${VULKAN_HEADERS_PREFIX}/include"
+    )
+    
+    target_include_directories(${PROJECT_NAME}_Triangle PRIVATE 
+        ${GLFW_INCLUDE_DIRS}
+        ${SPDLOG_INCLUDE_DIRS}
+        ${GLEW_INCLUDE_DIRS}
+        ${LUA_INCLUDE_DIRS}
+        "${VULKAN_HEADERS_PREFIX}/include"
+    )
+    
+    target_include_directories(${PROJECT_NAME}_MultiTriangles PRIVATE 
+        ${GLFW_INCLUDE_DIRS}
+        ${SPDLOG_INCLUDE_DIRS}
+        ${GLEW_INCLUDE_DIRS}
+        ${LUA_INCLUDE_DIRS}
+        "${VULKAN_HEADERS_PREFIX}/include"
+    )
+    
+    target_include_directories(${PROJECT_NAME}_RootNode PRIVATE 
         ${GLFW_INCLUDE_DIRS}
         ${SPDLOG_INCLUDE_DIRS}
         ${GLEW_INCLUDE_DIRS}
@@ -140,6 +233,47 @@ if(APPLE)
         ${LUA_LIBRARIES}
         ${Vulkan_LIBRARIES}
     )
+    
+    target_link_libraries(${PROJECT_NAME}_Example PRIVATE 
+        ${GLFW_LIBRARIES}
+        ${SPDLOG_LIBRARIES}
+        ${GLEW_LIBRARIES}
+        ${LUA_LIBRARIES}
+        ${Vulkan_LIBRARIES}
+    )
+    
+    target_link_libraries(${PROJECT_NAME}_SmoothCamera PRIVATE 
+        ${GLFW_LIBRARIES}
+        ${SPDLOG_LIBRARIES}
+        ${GLEW_LIBRARIES}
+        ${LUA_LIBRARIES}
+        ${Vulkan_LIBRARIES}
+    )
+    
+    target_link_libraries(${PROJECT_NAME}_Triangle PRIVATE 
+        ${GLFW_LIBRARIES}
+        ${SPDLOG_LIBRARIES}
+        ${GLEW_LIBRARIES}
+        ${LUA_LIBRARIES}
+        ${Vulkan_LIBRARIES}
+    )
+    
+    target_link_libraries(${PROJECT_NAME}_MultiTriangles PRIVATE 
+        ${GLFW_LIBRARIES}
+        ${SPDLOG_LIBRARIES}
+        ${GLEW_LIBRARIES}
+        ${LUA_LIBRARIES}
+        ${Vulkan_LIBRARIES}
+    )
+    
+    target_link_libraries(${PROJECT_NAME}_RootNode PRIVATE 
+        ${GLFW_LIBRARIES}
+        ${SPDLOG_LIBRARIES}
+        ${GLEW_LIBRARIES}
+        ${LUA_LIBRARIES}
+        ${Vulkan_LIBRARIES}
+    )
+    
     # Add library directories for pkg-config libraries
     target_link_directories(${PROJECT_NAME} PRIVATE 
         ${GLFW_LIBRARY_DIRS}
@@ -147,8 +281,78 @@ if(APPLE)
         ${GLEW_LIBRARY_DIRS}
         ${LUA_LIBRARY_DIRS}
     )
+    
+    target_link_directories(${PROJECT_NAME}_Example PRIVATE 
+        ${GLFW_LIBRARY_DIRS}
+        ${SPDLOG_LIBRARY_DIRS}
+        ${GLEW_LIBRARY_DIRS}
+        ${LUA_LIBRARY_DIRS}
+    )
+    
+    target_link_directories(${PROJECT_NAME}_SmoothCamera PRIVATE 
+        ${GLFW_LIBRARY_DIRS}
+        ${SPDLOG_LIBRARY_DIRS}
+        ${GLEW_LIBRARY_DIRS}
+        ${LUA_LIBRARY_DIRS}
+    )
+    
+    target_link_directories(${PROJECT_NAME}_Triangle PRIVATE 
+        ${GLFW_LIBRARY_DIRS}
+        ${SPDLOG_LIBRARY_DIRS}
+        ${GLEW_LIBRARY_DIRS}
+        ${LUA_LIBRARY_DIRS}
+    )
+    
+    target_link_directories(${PROJECT_NAME}_MultiTriangles PRIVATE 
+        ${GLFW_LIBRARY_DIRS}
+        ${SPDLOG_LIBRARY_DIRS}
+        ${GLEW_LIBRARY_DIRS}
+        ${LUA_LIBRARY_DIRS}
+    )
+    
+    target_link_directories(${PROJECT_NAME}_RootNode PRIVATE 
+        ${GLFW_LIBRARY_DIRS}
+        ${SPDLOG_LIBRARY_DIRS}
+        ${GLEW_LIBRARY_DIRS}
+        ${LUA_LIBRARY_DIRS}
+    )
 else()
     target_link_libraries(${PROJECT_NAME} PRIVATE 
+        ${GLFW_LIBRARIES}
+        spdlog::spdlog
+        ${GLEW_LIBRARIES}
+        ${Vulkan_LIBRARIES}
+    )
+    
+    target_link_libraries(${PROJECT_NAME}_Example PRIVATE 
+        ${GLFW_LIBRARIES}
+        spdlog::spdlog
+        ${GLEW_LIBRARIES}
+        ${Vulkan_LIBRARIES}
+    )
+    
+    target_link_libraries(${PROJECT_NAME}_SmoothCamera PRIVATE 
+        ${GLFW_LIBRARIES}
+        spdlog::spdlog
+        ${GLEW_LIBRARIES}
+        ${Vulkan_LIBRARIES}
+    )
+    
+    target_link_libraries(${PROJECT_NAME}_Triangle PRIVATE 
+        ${GLFW_LIBRARIES}
+        spdlog::spdlog
+        ${GLEW_LIBRARIES}
+        ${Vulkan_LIBRARIES}
+    )
+    
+    target_link_libraries(${PROJECT_NAME}_MultiTriangles PRIVATE 
+        ${GLFW_LIBRARIES}
+        spdlog::spdlog
+        ${GLEW_LIBRARIES}
+        ${Vulkan_LIBRARIES}
+    )
+    
+    target_link_libraries(${PROJECT_NAME}_RootNode PRIVATE 
         ${GLFW_LIBRARIES}
         spdlog::spdlog
         ${GLEW_LIBRARIES}
@@ -169,6 +373,36 @@ if(APPLE)
     find_library(COREVIDEO_LIBRARY CoreVideo)
     find_library(OPENGL_LIBRARY OpenGL)
     target_link_libraries(${PROJECT_NAME} PRIVATE 
+        ${COCOA_LIBRARY} 
+        ${IOKIT_LIBRARY} 
+        ${COREVIDEO_LIBRARY}
+        ${OPENGL_LIBRARY}
+    )
+    target_link_libraries(${PROJECT_NAME}_Example PRIVATE 
+        ${COCOA_LIBRARY} 
+        ${IOKIT_LIBRARY} 
+        ${COREVIDEO_LIBRARY}
+        ${OPENGL_LIBRARY}
+    )
+    target_link_libraries(${PROJECT_NAME}_SmoothCamera PRIVATE 
+        ${COCOA_LIBRARY} 
+        ${IOKIT_LIBRARY} 
+        ${COREVIDEO_LIBRARY}
+        ${OPENGL_LIBRARY}
+    )
+    target_link_libraries(${PROJECT_NAME}_Triangle PRIVATE 
+        ${COCOA_LIBRARY} 
+        ${IOKIT_LIBRARY} 
+        ${COREVIDEO_LIBRARY}
+        ${OPENGL_LIBRARY}
+    )
+    target_link_libraries(${PROJECT_NAME}_MultiTriangles PRIVATE 
+        ${COCOA_LIBRARY} 
+        ${IOKIT_LIBRARY} 
+        ${COREVIDEO_LIBRARY}
+        ${OPENGL_LIBRARY}
+    )
+    target_link_libraries(${PROJECT_NAME}_RootNode PRIVATE 
         ${COCOA_LIBRARY} 
         ${IOKIT_LIBRARY} 
         ${COREVIDEO_LIBRARY}

@@ -1,19 +1,17 @@
-
 #include "mentalsdk.hpp"
 #include <iostream>
 #include <chrono>
 #include <thread>
 #include <memory>
 
-int main()
-{
+int main() {
     try {
-        std::cout << "=== Mental Engine - Root Node with Smooth Camera ===" << std::endl;
+        std::cout << "=== Mental SDK - Root Node Scene Example ===" << std::endl;
         
         // Create window manager
         mentalsdk::CMentalWindowManager<> windowManager;
         
-        windowManager.SetTitle("Mental Engine - Root Node Scene with Smooth Camera");
+        windowManager.SetTitle("Mental SDK - Root Node Scene");
         
         int width = 0;
         int height = 0;
@@ -48,23 +46,21 @@ int main()
         rootNode->EnableHotReload(true);
         std::cout << "Hot reload enabled - you can edit root_scene.lua and see changes immediately!" << std::endl;
         
-        // Create and set up camera with SMOOTH control
+        // Create and set up camera
         auto camera = std::make_shared<mentalsdk::CMentalCamera>();
-        camera->LoadLuaScript("Common/Scripts/camera_mouse_smooth.lua");  // Use smooth camera script
+        camera->LoadLuaScript("Common/Scripts/camera_mouse.lua");
         
         // Set camera to both root node and pipeline
         rootNode->SetCamera(camera);
         pipeline->SetCamera(camera);
         
-        std::cout << "Scene setup completed with smooth camera!" << std::endl;
+        std::cout << "Scene setup completed!" << std::endl;
         
         // Main loop
-        std::cout << "Starting main loop with root node scene and smooth camera..." << std::endl;
+        std::cout << "Starting main loop with root node scene..." << std::endl;
         std::cout << "Controls:" << std::endl;
-        std::cout << "  WASD - Move camera (smooth)" << std::endl;
-        std::cout << "  Left mouse button + drag - Rotate camera (smooth)" << std::endl;
-        std::cout << "  Arrow keys - Control triangle_1 position" << std::endl;
-        std::cout << "  Keys 1-4 - Toggle object visibility" << std::endl;
+        std::cout << "  WASD - Move camera" << std::endl;
+        std::cout << "  Left mouse button + drag - Rotate camera" << std::endl;
         std::cout << "  Edit Common/Scripts/root_scene.lua to see changes in real-time!" << std::endl;
         std::cout << "  All objects are created and managed by Lua script!" << std::endl;
         
