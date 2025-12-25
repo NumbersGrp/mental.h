@@ -1,0 +1,2 @@
+/usr/bin/ar qc libufbx_lib.a CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o
+/usr/bin/ranlib libufbx_lib.a

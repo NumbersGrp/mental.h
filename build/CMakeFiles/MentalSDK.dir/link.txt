@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMentalSDK.a CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o
+/usr/bin/ranlib libMentalSDK.a

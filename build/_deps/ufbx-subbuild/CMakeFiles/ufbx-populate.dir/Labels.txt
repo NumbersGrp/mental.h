@@ -1,0 +1,14 @@
+# Target labels
+ ufbx-populate
+# Source files and their labels
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/CMakeFiles/ufbx-populate
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/CMakeFiles/ufbx-populate.rule
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/CMakeFiles/ufbx-populate-complete.rule
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/ufbx-populate-prefix/src/ufbx-populate-stamp/ufbx-populate-build.rule
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/ufbx-populate-prefix/src/ufbx-populate-stamp/ufbx-populate-configure.rule
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/ufbx-populate-prefix/src/ufbx-populate-stamp/ufbx-populate-download.rule
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/ufbx-populate-prefix/src/ufbx-populate-stamp/ufbx-populate-install.rule
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/ufbx-populate-prefix/src/ufbx-populate-stamp/ufbx-populate-mkdir.rule
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/ufbx-populate-prefix/src/ufbx-populate-stamp/ufbx-populate-patch.rule
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/ufbx-populate-prefix/src/ufbx-populate-stamp/ufbx-populate-test.rule
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/ufbx-populate-prefix/src/ufbx-populate-stamp/ufbx-populate-update.rule

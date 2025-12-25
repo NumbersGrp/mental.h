@@ -184,6 +184,18 @@ public:
      * @return Const pointer to the renderer object
      */
     const R* getRenderer() const { return up_renderer_.get(); }
+    
+    /**
+     * @brief Get a pointer to the GLFW window
+     * @return Pointer to the GLFW window
+     */
+    T* getWindow() { return up_window_.get(); }
+    
+    /**
+     * @brief Get a const pointer to the GLFW window
+     * @return Const pointer to the GLFW window
+     */
+    const T* getWindow() const { return up_window_.get(); }
 };
 
 // Template implementations

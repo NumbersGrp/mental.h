@@ -1,4 +1,3 @@
-
 /**
  * @file CMentalObject.hpp
  * @brief 3D object representation for the Mental SDK renderer
@@ -10,6 +9,8 @@
 
 #include <cstdint>
 #include <string>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 
 namespace mentalsdk
 {
@@ -22,6 +23,7 @@ namespace mentalsdk
  */
 enum MentalObjectType : std::uint8_t {
     Triangle = 0,  ///< Triangle primitive object
+    Fbx = 1, ///< Fbx model
 };
 
 /**
@@ -37,6 +39,9 @@ class CMentalObject
 {
 private:
     std::string name_; ///< Object name for identification
+    glm::vec3 position_{0.0F, 0.0F, 0.0F}; ///< Object position in 3D space
+    glm::vec3 rotation_{0.0F, 0.0F, 0.0F}; ///< Object rotation (Euler angles)
+    glm::vec3 scale_{1.0F, 1.0F, 1.0F}; ///< Object scale
 
 public:
     /**
@@ -73,6 +78,56 @@ public:
      * @param name New object name
      */
     void setName(const std::string& name) { name_ = name; }
+
+    /**
+     * @brief Get the object position
+     * @return Position vector
+     */
+    const glm::vec3& getPosition() const { return position_; }
+    
+    /**
+     * @brief Set the object position
+     * @param position New position vector
+     */
+    void setPosition(const glm::vec3& position) { position_ = position; }
+
+    /**
+     * @brief Get the object rotation
+     * @return Rotation vector (Euler angles)
+     */
+    const glm::vec3& getRotation() const { return rotation_; }
+    
+    /**
+     * @brief Set the object rotation
+     * @param rotation New rotation vector (Euler angles)
+     */
+    void setRotation(const glm::vec3& rotation) { rotation_ = rotation; }
+
+    /**
+     * @brief Get the object scale
+     * @return Scale vector
+     */
+    const glm::vec3& getScale() const { return scale_; }
+    
+    /**
+     * @brief Set the object scale
+     * @param scale New scale vector
+     */
+    void setScale(const glm::vec3& scale) { scale_ = scale; }
+
+    /**
+     * @brief Get the transformation matrix
+     * @return 4x4 transformation matrix
+     */
+    glm::mat4 getTransformMatrix() const {
+        glm::mat4 transform = glm::mat4(1.0F);
+        transform = glm::translate(transform, position_);
+        transform = glm::rotate(transform, rotation_.x, glm::vec3(1.0F, 0.0F, 0.0F));
+        transform = glm::rotate(transform, rotation_.y, glm::vec3(0.0F, 1.0F, 0.0F));
+        transform = glm::rotate(transform, rotation_.z, glm::vec3(0.0F, 0.0F, 1.0F));
+        transform = glm::scale(transform, scale_);
+        return transform;
+    }
 };
 
 } // namespace mentalsdk

@@ -1,0 +1,16 @@
+# Triangle Animation Script
+# Simple text-based script for triangle animation
+
+# Animation parameters
+rotation_speed=1.5
+color_cycle_speed=0.8
+pulse_speed=2.0
+
+# Color settings
+base_color_r=0.7
+base_color_g=0.5
+base_color_b=0.9
+
+# Animation description
+# This script defines a rotating triangle with color cycling
+# The triangle rotates around the Y axis and pulses with changing colors

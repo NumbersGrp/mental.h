@@ -1,3 +1,6 @@
+/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/ufbx_lib.dir
+/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/imgui_lib.dir
+/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/MentalSDK.dir
 /Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/mental_engine.dir
 /Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/edit_cache.dir
 /Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/rebuild_cache.dir

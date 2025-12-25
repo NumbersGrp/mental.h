@@ -14,6 +14,7 @@ A C++ SDK for window management and OpenGL rendering using GLFW and GLEW.
 
 - **GLFW 3.x** - Window and input handling
 - **GLEW** - OpenGL extension loading
+- **GLM** - OpenGL Mathematics library
 - **OpenGL 3.3+** - Graphics rendering
 - **CMake 3.16+** - Build system
 
@@ -21,17 +22,17 @@ A C++ SDK for window management and OpenGL rendering using GLFW and GLEW.
 
 ### macOS
 ```bash
-brew install glfw glew
+brew install glfw glew glm
 ```
 
 ### Ubuntu/Debian
 ```bash
-sudo apt-get install libglfw3-dev libglew-dev
+sudo apt-get install libglfw3-dev libglew-dev libglm-dev
 ```
 
 ### Fedora
 ```bash
-sudo dnf install glfw-devel glew-devel
+sudo dnf install glfw-devel glew-devel glm-devel
 ```
 
 ## Building

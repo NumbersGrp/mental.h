@@ -162,6 +162,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named ufbx_lib
+
+# Build rule for target.
+ufbx_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ufbx_lib
+.PHONY : ufbx_lib
+
+# fast build rule for target.
+ufbx_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ufbx_lib.dir/build.make CMakeFiles/ufbx_lib.dir/build
+.PHONY : ufbx_lib/fast
+
+#=============================================================================
+# Target rules for targets named imgui_lib
+
+# Build rule for target.
+imgui_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 imgui_lib
+.PHONY : imgui_lib
+
+# fast build rule for target.
+imgui_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/build
+.PHONY : imgui_lib/fast
+
+#=============================================================================
+# Target rules for targets named MentalSDK
+
+# Build rule for target.
+MentalSDK: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 MentalSDK
+.PHONY : MentalSDK
+
+# fast build rule for target.
+MentalSDK/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/build
+.PHONY : MentalSDK/fast
+
+#=============================================================================
 # Target rules for targets named mental_engine
 
 # Build rule for target.
@@ -173,6 +212,198 @@ mental_engine: cmake_check_build_system
 mental_engine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/build
 .PHONY : mental_engine/fast
+
+External/imgui/backends/imgui_impl_glfw.o: External/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : External/imgui/backends/imgui_impl_glfw.o
+
+# target to build an object file
+External/imgui/backends/imgui_impl_glfw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/backends/imgui_impl_glfw.cpp.o
+.PHONY : External/imgui/backends/imgui_impl_glfw.cpp.o
+
+External/imgui/backends/imgui_impl_glfw.i: External/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : External/imgui/backends/imgui_impl_glfw.i
+
+# target to preprocess a source file
+External/imgui/backends/imgui_impl_glfw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/backends/imgui_impl_glfw.cpp.i
+.PHONY : External/imgui/backends/imgui_impl_glfw.cpp.i
+
+External/imgui/backends/imgui_impl_glfw.s: External/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : External/imgui/backends/imgui_impl_glfw.s
+
+# target to generate assembly for a file
+External/imgui/backends/imgui_impl_glfw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/backends/imgui_impl_glfw.cpp.s
+.PHONY : External/imgui/backends/imgui_impl_glfw.cpp.s
+
+External/imgui/backends/imgui_impl_opengl3.o: External/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : External/imgui/backends/imgui_impl_opengl3.o
+
+# target to build an object file
+External/imgui/backends/imgui_impl_opengl3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/backends/imgui_impl_opengl3.cpp.o
+.PHONY : External/imgui/backends/imgui_impl_opengl3.cpp.o
+
+External/imgui/backends/imgui_impl_opengl3.i: External/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : External/imgui/backends/imgui_impl_opengl3.i
+
+# target to preprocess a source file
+External/imgui/backends/imgui_impl_opengl3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/backends/imgui_impl_opengl3.cpp.i
+.PHONY : External/imgui/backends/imgui_impl_opengl3.cpp.i
+
+External/imgui/backends/imgui_impl_opengl3.s: External/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : External/imgui/backends/imgui_impl_opengl3.s
+
+# target to generate assembly for a file
+External/imgui/backends/imgui_impl_opengl3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/backends/imgui_impl_opengl3.cpp.s
+.PHONY : External/imgui/backends/imgui_impl_opengl3.cpp.s
+
+External/imgui/imgui.o: External/imgui/imgui.cpp.o
+.PHONY : External/imgui/imgui.o
+
+# target to build an object file
+External/imgui/imgui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui.cpp.o
+.PHONY : External/imgui/imgui.cpp.o
+
+External/imgui/imgui.i: External/imgui/imgui.cpp.i
+.PHONY : External/imgui/imgui.i
+
+# target to preprocess a source file
+External/imgui/imgui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui.cpp.i
+.PHONY : External/imgui/imgui.cpp.i
+
+External/imgui/imgui.s: External/imgui/imgui.cpp.s
+.PHONY : External/imgui/imgui.s
+
+# target to generate assembly for a file
+External/imgui/imgui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui.cpp.s
+.PHONY : External/imgui/imgui.cpp.s
+
+External/imgui/imgui_demo.o: External/imgui/imgui_demo.cpp.o
+.PHONY : External/imgui/imgui_demo.o
+
+# target to build an object file
+External/imgui/imgui_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_demo.cpp.o
+.PHONY : External/imgui/imgui_demo.cpp.o
+
+External/imgui/imgui_demo.i: External/imgui/imgui_demo.cpp.i
+.PHONY : External/imgui/imgui_demo.i
+
+# target to preprocess a source file
+External/imgui/imgui_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_demo.cpp.i
+.PHONY : External/imgui/imgui_demo.cpp.i
+
+External/imgui/imgui_demo.s: External/imgui/imgui_demo.cpp.s
+.PHONY : External/imgui/imgui_demo.s
+
+# target to generate assembly for a file
+External/imgui/imgui_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_demo.cpp.s
+.PHONY : External/imgui/imgui_demo.cpp.s
+
+External/imgui/imgui_draw.o: External/imgui/imgui_draw.cpp.o
+.PHONY : External/imgui/imgui_draw.o
+
+# target to build an object file
+External/imgui/imgui_draw.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_draw.cpp.o
+.PHONY : External/imgui/imgui_draw.cpp.o
+
+External/imgui/imgui_draw.i: External/imgui/imgui_draw.cpp.i
+.PHONY : External/imgui/imgui_draw.i
+
+# target to preprocess a source file
+External/imgui/imgui_draw.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_draw.cpp.i
+.PHONY : External/imgui/imgui_draw.cpp.i
+
+External/imgui/imgui_draw.s: External/imgui/imgui_draw.cpp.s
+.PHONY : External/imgui/imgui_draw.s
+
+# target to generate assembly for a file
+External/imgui/imgui_draw.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_draw.cpp.s
+.PHONY : External/imgui/imgui_draw.cpp.s
+
+External/imgui/imgui_tables.o: External/imgui/imgui_tables.cpp.o
+.PHONY : External/imgui/imgui_tables.o
+
+# target to build an object file
+External/imgui/imgui_tables.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_tables.cpp.o
+.PHONY : External/imgui/imgui_tables.cpp.o
+
+External/imgui/imgui_tables.i: External/imgui/imgui_tables.cpp.i
+.PHONY : External/imgui/imgui_tables.i
+
+# target to preprocess a source file
+External/imgui/imgui_tables.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_tables.cpp.i
+.PHONY : External/imgui/imgui_tables.cpp.i
+
+External/imgui/imgui_tables.s: External/imgui/imgui_tables.cpp.s
+.PHONY : External/imgui/imgui_tables.s
+
+# target to generate assembly for a file
+External/imgui/imgui_tables.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_tables.cpp.s
+.PHONY : External/imgui/imgui_tables.cpp.s
+
+External/imgui/imgui_widgets.o: External/imgui/imgui_widgets.cpp.o
+.PHONY : External/imgui/imgui_widgets.o
+
+# target to build an object file
+External/imgui/imgui_widgets.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_widgets.cpp.o
+.PHONY : External/imgui/imgui_widgets.cpp.o
+
+External/imgui/imgui_widgets.i: External/imgui/imgui_widgets.cpp.i
+.PHONY : External/imgui/imgui_widgets.i
+
+# target to preprocess a source file
+External/imgui/imgui_widgets.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_widgets.cpp.i
+.PHONY : External/imgui/imgui_widgets.cpp.i
+
+External/imgui/imgui_widgets.s: External/imgui/imgui_widgets.cpp.s
+.PHONY : External/imgui/imgui_widgets.s
+
+# target to generate assembly for a file
+External/imgui/imgui_widgets.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/External/imgui/imgui_widgets.cpp.s
+.PHONY : External/imgui/imgui_widgets.cpp.s
+
+External/ufbx/ufbx.o: External/ufbx/ufbx.c.o
+.PHONY : External/ufbx/ufbx.o
+
+# target to build an object file
+External/ufbx/ufbx.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ufbx_lib.dir/build.make CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o
+.PHONY : External/ufbx/ufbx.c.o
+
+External/ufbx/ufbx.i: External/ufbx/ufbx.c.i
+.PHONY : External/ufbx/ufbx.i
+
+# target to preprocess a source file
+External/ufbx/ufbx.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ufbx_lib.dir/build.make CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.i
+.PHONY : External/ufbx/ufbx.c.i
+
+External/ufbx/ufbx.s: External/ufbx/ufbx.c.s
+.PHONY : External/ufbx/ufbx.s
+
+# target to generate assembly for a file
+External/ufbx/ufbx.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ufbx_lib.dir/build.make CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.s
+.PHONY : External/ufbx/ufbx.c.s
 
 GameEngine/mental.o: GameEngine/mental.cpp.o
 .PHONY : GameEngine/mental.o
@@ -198,6 +429,102 @@ GameEngine/mental.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.s
 .PHONY : GameEngine/mental.cpp.s
 
+SDK/Renderer/Object/CMentalFBXModel.o: SDK/Renderer/Object/CMentalFBXModel.cpp.o
+.PHONY : SDK/Renderer/Object/CMentalFBXModel.o
+
+# target to build an object file
+SDK/Renderer/Object/CMentalFBXModel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o
+.PHONY : SDK/Renderer/Object/CMentalFBXModel.cpp.o
+
+SDK/Renderer/Object/CMentalFBXModel.i: SDK/Renderer/Object/CMentalFBXModel.cpp.i
+.PHONY : SDK/Renderer/Object/CMentalFBXModel.i
+
+# target to preprocess a source file
+SDK/Renderer/Object/CMentalFBXModel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.i
+.PHONY : SDK/Renderer/Object/CMentalFBXModel.cpp.i
+
+SDK/Renderer/Object/CMentalFBXModel.s: SDK/Renderer/Object/CMentalFBXModel.cpp.s
+.PHONY : SDK/Renderer/Object/CMentalFBXModel.s
+
+# target to generate assembly for a file
+SDK/Renderer/Object/CMentalFBXModel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.s
+.PHONY : SDK/Renderer/Object/CMentalFBXModel.cpp.s
+
+SDK/Renderer/Object/CMentalOBJModel.o: SDK/Renderer/Object/CMentalOBJModel.cpp.o
+.PHONY : SDK/Renderer/Object/CMentalOBJModel.o
+
+# target to build an object file
+SDK/Renderer/Object/CMentalOBJModel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o
+.PHONY : SDK/Renderer/Object/CMentalOBJModel.cpp.o
+
+SDK/Renderer/Object/CMentalOBJModel.i: SDK/Renderer/Object/CMentalOBJModel.cpp.i
+.PHONY : SDK/Renderer/Object/CMentalOBJModel.i
+
+# target to preprocess a source file
+SDK/Renderer/Object/CMentalOBJModel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.i
+.PHONY : SDK/Renderer/Object/CMentalOBJModel.cpp.i
+
+SDK/Renderer/Object/CMentalOBJModel.s: SDK/Renderer/Object/CMentalOBJModel.cpp.s
+.PHONY : SDK/Renderer/Object/CMentalOBJModel.s
+
+# target to generate assembly for a file
+SDK/Renderer/Object/CMentalOBJModel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.s
+.PHONY : SDK/Renderer/Object/CMentalOBJModel.cpp.s
+
+SDK/UI/CMentalImGui.o: SDK/UI/CMentalImGui.cpp.o
+.PHONY : SDK/UI/CMentalImGui.o
+
+# target to build an object file
+SDK/UI/CMentalImGui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o
+.PHONY : SDK/UI/CMentalImGui.cpp.o
+
+SDK/UI/CMentalImGui.i: SDK/UI/CMentalImGui.cpp.i
+.PHONY : SDK/UI/CMentalImGui.i
+
+# target to preprocess a source file
+SDK/UI/CMentalImGui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.i
+.PHONY : SDK/UI/CMentalImGui.cpp.i
+
+SDK/UI/CMentalImGui.s: SDK/UI/CMentalImGui.cpp.s
+.PHONY : SDK/UI/CMentalImGui.s
+
+# target to generate assembly for a file
+SDK/UI/CMentalImGui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.s
+.PHONY : SDK/UI/CMentalImGui.cpp.s
+
+SDK/WindowManager/CMentalWindowManager.o: SDK/WindowManager/CMentalWindowManager.cpp.o
+.PHONY : SDK/WindowManager/CMentalWindowManager.o
+
+# target to build an object file
+SDK/WindowManager/CMentalWindowManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o
+.PHONY : SDK/WindowManager/CMentalWindowManager.cpp.o
+
+SDK/WindowManager/CMentalWindowManager.i: SDK/WindowManager/CMentalWindowManager.cpp.i
+.PHONY : SDK/WindowManager/CMentalWindowManager.i
+
+# target to preprocess a source file
+SDK/WindowManager/CMentalWindowManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.i
+.PHONY : SDK/WindowManager/CMentalWindowManager.cpp.i
+
+SDK/WindowManager/CMentalWindowManager.s: SDK/WindowManager/CMentalWindowManager.cpp.s
+.PHONY : SDK/WindowManager/CMentalWindowManager.s
+
+# target to generate assembly for a file
+SDK/WindowManager/CMentalWindowManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.s
+.PHONY : SDK/WindowManager/CMentalWindowManager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -210,10 +537,49 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... MentalSDK"
+	@echo "... imgui_lib"
 	@echo "... mental_engine"
+	@echo "... ufbx_lib"
+	@echo "... External/imgui/backends/imgui_impl_glfw.o"
+	@echo "... External/imgui/backends/imgui_impl_glfw.i"
+	@echo "... External/imgui/backends/imgui_impl_glfw.s"
+	@echo "... External/imgui/backends/imgui_impl_opengl3.o"
+	@echo "... External/imgui/backends/imgui_impl_opengl3.i"
+	@echo "... External/imgui/backends/imgui_impl_opengl3.s"
+	@echo "... External/imgui/imgui.o"
+	@echo "... External/imgui/imgui.i"
+	@echo "... External/imgui/imgui.s"
+	@echo "... External/imgui/imgui_demo.o"
+	@echo "... External/imgui/imgui_demo.i"
+	@echo "... External/imgui/imgui_demo.s"
+	@echo "... External/imgui/imgui_draw.o"
+	@echo "... External/imgui/imgui_draw.i"
+	@echo "... External/imgui/imgui_draw.s"
+	@echo "... External/imgui/imgui_tables.o"
+	@echo "... External/imgui/imgui_tables.i"
+	@echo "... External/imgui/imgui_tables.s"
+	@echo "... External/imgui/imgui_widgets.o"
+	@echo "... External/imgui/imgui_widgets.i"
+	@echo "... External/imgui/imgui_widgets.s"
+	@echo "... External/ufbx/ufbx.o"
+	@echo "... External/ufbx/ufbx.i"
+	@echo "... External/ufbx/ufbx.s"
 	@echo "... GameEngine/mental.o"
 	@echo "... GameEngine/mental.i"
 	@echo "... GameEngine/mental.s"
+	@echo "... SDK/Renderer/Object/CMentalFBXModel.o"
+	@echo "... SDK/Renderer/Object/CMentalFBXModel.i"
+	@echo "... SDK/Renderer/Object/CMentalFBXModel.s"
+	@echo "... SDK/Renderer/Object/CMentalOBJModel.o"
+	@echo "... SDK/Renderer/Object/CMentalOBJModel.i"
+	@echo "... SDK/Renderer/Object/CMentalOBJModel.s"
+	@echo "... SDK/UI/CMentalImGui.o"
+	@echo "... SDK/UI/CMentalImGui.i"
+	@echo "... SDK/UI/CMentalImGui.s"
+	@echo "... SDK/WindowManager/CMentalWindowManager.o"
+	@echo "... SDK/WindowManager/CMentalWindowManager.i"
+	@echo "... SDK/WindowManager/CMentalWindowManager.s"
 .PHONY : help
 
 

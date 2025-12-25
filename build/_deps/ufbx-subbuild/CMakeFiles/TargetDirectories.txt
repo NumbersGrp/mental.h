@@ -1,0 +1,3 @@
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/CMakeFiles/ufbx-populate.dir
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/CMakeFiles/edit_cache.dir
+/Users/twelvefacedjanus/Documents/mental.h/build/_deps/ufbx-subbuild/CMakeFiles/rebuild_cache.dir
