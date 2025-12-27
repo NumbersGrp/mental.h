@@ -179,6 +179,9 @@ public:
             return; // No shader or invalid shader, can't render
         }
         
+        // Check for shader hot reload (const_cast needed for hot reload functionality)
+        const_cast<CMentalShader*>(shader_.get())->checkAndReload();
+        
         // Use the shader
         shader_->use();
         

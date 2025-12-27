@@ -19,6 +19,7 @@ int main() {
         auto triangle = mentalsdk::CMentalObject::createTriangle("MyTriangle");
         auto shader = std::make_unique<mentalsdk::CMentalShader>();
         shader->loadFromFiles("vertex_shader.glsl", "fragment_shader.glsl");
+        shader->enableHotReload(true);  // Enable hot reload
         triangle->setShader(std::move(shader));
         
         auto camera = std::make_shared<mentalsdk::CMentalObject>("Camera", mentalsdk::CMentalObjectType::Camera);

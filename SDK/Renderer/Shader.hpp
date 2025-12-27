@@ -7,6 +7,8 @@
 #include <glm/glm.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #include <iostream>
+#include <sys/stat.h>
+#include <chrono>
 
 namespace mentalsdk
 {
@@ -17,6 +19,11 @@ class CMentalShader
 {
 private:
     GLuint programID_ = 0;
+    std::string vertexPath_;
+    std::string fragmentPath_;
+    std::time_t vertexLastModified_ = 0;
+    std::time_t fragmentLastModified_ = 0;
+    bool hotReloadEnabled_ = false;
     
     static GLuint compileShader(const std::string& source, GLenum shaderType) {
         unsigned int shader = glCreateShader(shaderType);
@@ -57,6 +64,14 @@ private:
         glDeleteShader(fragmentShader);
     }
     
+    static std::time_t getFileModificationTime(const std::string& filePath) {
+        struct stat fileInfo;
+        if (stat(filePath.c_str(), &fileInfo) == 0) {
+            return fileInfo.st_mtime;
+        }
+        return 0;
+    }
+    
     static std::string readFile(const std::string& filePath) {
         std::ifstream file(filePath);
         if (!file.is_open()) { return ""; }
@@ -68,10 +83,15 @@ private:
 
 public:
     CMentalShader() = default;
-    CMentalShader(const std::string& vertexPath, const std::string& fragmentPath) {
+    CMentalShader(const std::string& vertexPath, const std::string& fragmentPath) 
+        : vertexPath_(vertexPath), fragmentPath_(fragmentPath) {
         loadFromFiles(vertexPath, fragmentPath);
     }
-    ~CMentalShader() = default;
+    ~CMentalShader() {
+        if (programID_ != 0) {
+            glDeleteProgram(programID_);
+        }
+    }
 
     CMentalShader(const CMentalShader&) = delete;
     CMentalShader& operator=(const CMentalShader&) = delete;
@@ -80,6 +100,11 @@ public:
 
     void loadFromFiles(const std::string& vertexPath, const std::string& fragmentPath) {
         std::cout << "Loading shaders: " << vertexPath << " and " << fragmentPath << "\n";
+        
+        // Store paths for hot reload
+        vertexPath_ = vertexPath;
+        fragmentPath_ = fragmentPath;
+        
         const std::string& vertexData = this->readFile(vertexPath);
         const std::string& fragmentData = this->readFile(fragmentPath);
         
@@ -95,7 +120,17 @@ public:
         std::cout << "Vertex shader loaded (" << vertexData.length() << " chars)\n";
         std::cout << "Fragment shader loaded (" << fragmentData.length() << " chars)\n";
         
+        // Delete old program if it exists
+        if (programID_ != 0) {
+            glDeleteProgram(programID_);
+            programID_ = 0;
+        }
+        
         this->createShaderProgram(vertexData, fragmentData);
+        
+        // Update modification times
+        vertexLastModified_ = getFileModificationTime(vertexPath);
+        fragmentLastModified_ = getFileModificationTime(fragmentPath);
         
         if (this->isValid()) {
             std::cout << "Shader program created successfully with ID: " << programID_ << "\n";
@@ -105,6 +140,33 @@ public:
     }
 
     void use() const;
+    
+    void enableHotReload(bool enable = true) { 
+        hotReloadEnabled_ = enable; 
+        if (enable) {
+            std::cout << "Hot reload enabled for shaders: " << vertexPath_ << ", " << fragmentPath_ << "\n";
+        }
+    }
+    
+    bool checkAndReload() {
+        if (isFileEdited()) {
+            std::cout << "Shader files modified, reloading...\n";
+            loadFromFiles(vertexPath_, fragmentPath_);
+            return true;
+        }
+        return false;
+    }
+    
+    bool isFileEdited() {
+        if (!hotReloadEnabled_ || vertexPath_.empty() || fragmentPath_.empty()) {
+            return false;
+        }
+        
+        std::time_t currentVertexTime = getFileModificationTime(vertexPath_);
+        std::time_t currentFragmentTime = getFileModificationTime(fragmentPath_);
+        
+        return (currentVertexTime > vertexLastModified_) || (currentFragmentTime > fragmentLastModified_);
+    }
     
     void setMat4(const std::string& name, const glm::mat4& mat) const;
     void setVec3(const std::string& name, const glm::vec3& value) const;
