@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/twelvefacedjanus/Documents/mental.h
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/twelvefacedjanus/Documents/mental.h/build
+CMAKE_BINARY_DIR = /Users/twelvefacedjanus/Documents/mental.h/Build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/mental_engine.dir/depend.make
@@ -72,28 +72,28 @@ include CMakeFiles/mental_engine.dir/flags.make
 CMakeFiles/mental_engine.dir/codegen:
 .PHONY : CMakeFiles/mental_engine.dir/codegen
 
-CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o: CMakeFiles/mental_engine.dir/flags.make
-CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o: /Users/twelvefacedjanus/Documents/mental.h/GameEngine/mental.cpp
-CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o: CMakeFiles/mental_engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o -MF CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o.d -o CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/GameEngine/mental.cpp
+CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: CMakeFiles/mental_engine.dir/flags.make
+CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp
+CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: CMakeFiles/mental_engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mental_engine.dir/Engine/mental.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mental_engine.dir/Engine/mental.cpp.o -MF CMakeFiles/mental_engine.dir/Engine/mental.cpp.o.d -o CMakeFiles/mental_engine.dir/Engine/mental.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp
 
-CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/GameEngine/mental.cpp > CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.i
+CMakeFiles/mental_engine.dir/Engine/mental.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mental_engine.dir/Engine/mental.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp > CMakeFiles/mental_engine.dir/Engine/mental.cpp.i
 
-CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/GameEngine/mental.cpp -o CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.s
+CMakeFiles/mental_engine.dir/Engine/mental.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mental_engine.dir/Engine/mental.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp -o CMakeFiles/mental_engine.dir/Engine/mental.cpp.s
 
 # Object files for target mental_engine
 mental_engine_OBJECTS = \
-"CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o"
+"CMakeFiles/mental_engine.dir/Engine/mental.cpp.o"
 
 # External object files for target mental_engine
 mental_engine_EXTERNAL_OBJECTS =
 
-mental_engine: CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o
+mental_engine: CMakeFiles/mental_engine.dir/Engine/mental.cpp.o
 mental_engine: CMakeFiles/mental_engine.dir/build.make
 mental_engine: libMentalSDK.a
 mental_engine: /opt/homebrew/lib/libglm.dylib
@@ -102,14 +102,14 @@ mental_engine: libimgui_lib.a
 mental_engine: /opt/homebrew/lib/libglfw.3.4.dylib
 mental_engine: /opt/homebrew/lib/libGLEW.2.2.0.dylib
 mental_engine: CMakeFiles/mental_engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mental_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mental_engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mental_engine.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Setting up MentalEngine directory structure and copying files"
-	/opt/homebrew/bin/cmake -E make_directory /Users/twelvefacedjanus/Documents/mental.h/build/MentalEngine/bin
-	/opt/homebrew/bin/cmake -E make_directory /Users/twelvefacedjanus/Documents/mental.h/build/MentalEngine/common
-	/opt/homebrew/bin/cmake -E copy_directory /Users/twelvefacedjanus/Documents/mental.h/GameEngine/Common /Users/twelvefacedjanus/Documents/mental.h/build/MentalEngine/common
-	/opt/homebrew/bin/cmake -E copy /Users/twelvefacedjanus/Documents/mental.h/build/mental_engine /Users/twelvefacedjanus/Documents/mental.h/build/MentalEngine/bin/
-	/opt/homebrew/bin/cmake -E create_symlink bin/mental_engine /Users/twelvefacedjanus/Documents/mental.h/build/MentalEngine/mental_engine
+	/opt/homebrew/bin/cmake -E make_directory /Users/twelvefacedjanus/Documents/mental.h/Build/MentalEngine/bin
+	/opt/homebrew/bin/cmake -E make_directory /Users/twelvefacedjanus/Documents/mental.h/Build/MentalEngine/common
+	/opt/homebrew/bin/cmake -E copy_directory /Users/twelvefacedjanus/Documents/mental.h/Engine/Common /Users/twelvefacedjanus/Documents/mental.h/Build/MentalEngine/common
+	/opt/homebrew/bin/cmake -E copy /Users/twelvefacedjanus/Documents/mental.h/Build/mental_engine /Users/twelvefacedjanus/Documents/mental.h/Build/MentalEngine/bin/
+	/opt/homebrew/bin/cmake -E create_symlink bin/mental_engine /Users/twelvefacedjanus/Documents/mental.h/Build/MentalEngine/mental_engine
 
 # Rule to build all files generated by this target.
 CMakeFiles/mental_engine.dir/build: mental_engine
@@ -120,6 +120,6 @@ CMakeFiles/mental_engine.dir/clean:
 .PHONY : CMakeFiles/mental_engine.dir/clean
 
 CMakeFiles/mental_engine.dir/depend:
-	cd /Users/twelvefacedjanus/Documents/mental.h/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h/build /Users/twelvefacedjanus/Documents/mental.h/build /Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/mental_engine.dir/DependInfo.cmake "--color=$(COLOR)" mental_engine
+	cd /Users/twelvefacedjanus/Documents/mental.h/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h/Build /Users/twelvefacedjanus/Documents/mental.h/Build /Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles/mental_engine.dir/DependInfo.cmake "--color=$(COLOR)" mental_engine
 .PHONY : CMakeFiles/mental_engine.dir/depend
 

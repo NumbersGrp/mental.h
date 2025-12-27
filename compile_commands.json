@@ -1,0 +1,62 @@
+[
+{
+  "directory": "/Users/twelvefacedjanus/Documents/mental.h/Build",
+  "command": "/usr/bin/cc  -I/Users/twelvefacedjanus/Documents/mental.h/External/ufbx -I/Users/twelvefacedjanus/Documents/mental.h/SDK -I/Users/twelvefacedjanus/Documents/mental.h/External -O3 -DNDEBUG -arch arm64 -o CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o -c /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c",
+  "file": "/Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c",
+  "output": "CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o"
+},
+{
+  "directory": "/Users/twelvefacedjanus/Documents/mental.h/Build",
+  "command": "/usr/bin/c++ -DIMGUI_ENABLE_DOCKING -DIMGUI_ENABLE_VIEWPORTS -DIMGUI_IMPL_OPENGL_LOADER_GLEW -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends -I/Users/twelvefacedjanus/Documents/mental.h/SDK -I/Users/twelvefacedjanus/Documents/mental.h/External -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -O3 -DNDEBUG -std=c++17 -arch arm64 -F/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks  -o CMakeFiles/imgui_lib.dir/External/imgui/imgui.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/External/imgui/imgui.cpp",
+  "file": "/Users/twelvefacedjanus/Documents/mental.h/External/imgui/imgui.cpp",
+  "output": "CMakeFiles/imgui_lib.dir/External/imgui/imgui.cpp.o"
+},
+{
+  "directory": "/Users/twelvefacedjanus/Documents/mental.h/Build",
+  "command": "/usr/bin/c++ -DIMGUI_ENABLE_DOCKING -DIMGUI_ENABLE_VIEWPORTS -DIMGUI_IMPL_OPENGL_LOADER_GLEW -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends -I/Users/twelvefacedjanus/Documents/mental.h/SDK -I/Users/twelvefacedjanus/Documents/mental.h/External -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -O3 -DNDEBUG -std=c++17 -arch arm64 -F/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks  -o CMakeFiles/imgui_lib.dir/External/imgui/imgui_demo.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/External/imgui/imgui_demo.cpp",
+  "file": "/Users/twelvefacedjanus/Documents/mental.h/External/imgui/imgui_demo.cpp",
+  "output": "CMakeFiles/imgui_lib.dir/External/imgui/imgui_demo.cpp.o"
+},
+{
+  "directory": "/Users/twelvefacedjanus/Documents/mental.h/Build",
+  "command": "/usr/bin/c++ -DIMGUI_ENABLE_DOCKING -DIMGUI_ENABLE_VIEWPORTS -DIMGUI_IMPL_OPENGL_LOADER_GLEW -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends -I/Users/twelvefacedjanus/Documents/mental.h/SDK -I/Users/twelvefacedjanus/Documents/mental.h/External -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -O3 -DNDEBUG -std=c++17 -arch arm64 -F/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks  -o CMakeFiles/imgui_lib.dir/External/imgui/imgui_draw.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/External/imgui/imgui_draw.cpp",
+  "file": "/Users/twelvefacedjanus/Documents/mental.h/External/imgui/imgui_draw.cpp",
+  "output": "CMakeFiles/imgui_lib.dir/External/imgui/imgui_draw.cpp.o"
+},
+{
+  "directory": "/Users/twelvefacedjanus/Documents/mental.h/Build",
+  "command": "/usr/bin/c++ -DIMGUI_ENABLE_DOCKING -DIMGUI_ENABLE_VIEWPORTS -DIMGUI_IMPL_OPENGL_LOADER_GLEW -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends -I/Users/twelvefacedjanus/Documents/mental.h/SDK -I/Users/twelvefacedjanus/Documents/mental.h/External -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -O3 -DNDEBUG -std=c++17 -arch arm64 -F/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks  -o CMakeFiles/imgui_lib.dir/External/imgui/imgui_tables.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/External/imgui/imgui_tables.cpp",
+  "file": "/Users/twelvefacedjanus/Documents/mental.h/External/imgui/imgui_tables.cpp",
+  "output": "CMakeFiles/imgui_lib.dir/External/imgui/imgui_tables.cpp.o"
+},
+{
+  "directory": "/Users/twelvefacedjanus/Documents/mental.h/Build",
+  "command": "/usr/bin/c++ -DIMGUI_ENABLE_DOCKING -DIMGUI_ENABLE_VIEWPORTS -DIMGUI_IMPL_OPENGL_LOADER_GLEW -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends -I/Users/twelvefacedjanus/Documents/mental.h/SDK -I/Users/twelvefacedjanus/Documents/mental.h/External -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -O3 -DNDEBUG -std=c++17 -arch arm64 -F/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks  -o CMakeFiles/imgui_lib.dir/External/imgui/imgui_widgets.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/External/imgui/imgui_widgets.cpp",
+  "file": "/Users/twelvefacedjanus/Documents/mental.h/External/imgui/imgui_widgets.cpp",
+  "output": "CMakeFiles/imgui_lib.dir/External/imgui/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/Users/twelvefacedjanus/Documents/mental.h/Build",
+  "command": "/usr/bin/c++ -DIMGUI_ENABLE_DOCKING -DIMGUI_ENABLE_VIEWPORTS -DIMGUI_IMPL_OPENGL_LOADER_GLEW -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends -I/Users/twelvefacedjanus/Documents/mental.h/SDK -I/Users/twelvefacedjanus/Documents/mental.h/External -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -O3 -DNDEBUG -std=c++17 -arch arm64 -F/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks  -o CMakeFiles/imgui_lib.dir/External/imgui/backends/imgui_impl_glfw.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends/imgui_impl_glfw.cpp",
+  "file": "/Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/imgui_lib.dir/External/imgui/backends/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/Users/twelvefacedjanus/Documents/mental.h/Build",
+  "command": "/usr/bin/c++ -DIMGUI_ENABLE_DOCKING -DIMGUI_ENABLE_VIEWPORTS -DIMGUI_IMPL_OPENGL_LOADER_GLEW -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends -I/Users/twelvefacedjanus/Documents/mental.h/SDK -I/Users/twelvefacedjanus/Documents/mental.h/External -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -O3 -DNDEBUG -std=c++17 -arch arm64 -F/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks  -o CMakeFiles/imgui_lib.dir/External/imgui/backends/imgui_impl_opengl3.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends/imgui_impl_opengl3.cpp",
+  "file": "/Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/imgui_lib.dir/External/imgui/backends/imgui_impl_opengl3.cpp.o"
+},
+{
+  "directory": "/Users/twelvefacedjanus/Documents/mental.h/Build",
+  "command": "/usr/bin/c++ -DIMGUI_ENABLE_DOCKING -DIMGUI_ENABLE_VIEWPORTS -DIMGUI_IMPL_OPENGL_LOADER_GLEW -I/Users/twelvefacedjanus/Documents/mental.h/SDK -I/Users/twelvefacedjanus/Documents/mental.h/External -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -I/Users/twelvefacedjanus/Documents/mental.h/External/ufbx -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends -isystem /opt/homebrew/include -O3 -DNDEBUG -std=c++17 -arch arm64 -F/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks  -o CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp",
+  "file": "/Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp",
+  "output": "CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o"
+},
+{
+  "directory": "/Users/twelvefacedjanus/Documents/mental.h/Build",
+  "command": "/usr/bin/c++ -DIMGUI_ENABLE_DOCKING -DIMGUI_ENABLE_VIEWPORTS -DIMGUI_IMPL_OPENGL_LOADER_GLEW -I/Users/twelvefacedjanus/Documents/mental.h/SDK -I/Users/twelvefacedjanus/Documents/mental.h/External -F/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks -I/Users/twelvefacedjanus/Documents/mental.h/External/ufbx -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui -I/Users/twelvefacedjanus/Documents/mental.h/External/imgui/backends -isystem /opt/homebrew/include -O3 -DNDEBUG -std=c++17 -arch arm64 -F/Library/Developer/CommandLineTools/SDKs/MacOSX26.sdk/System/Library/Frameworks  -o CMakeFiles/mental_engine.dir/Engine/mental.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp",
+  "file": "/Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp",
+  "output": "CMakeFiles/mental_engine.dir/Engine/mental.cpp.o"
+}
+]

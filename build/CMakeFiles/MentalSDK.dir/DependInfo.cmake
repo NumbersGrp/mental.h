@@ -8,10 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Object/CMentalFBXModel.cpp" "CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o" "gcc" "CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o.d"
-  "/Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Object/CMentalOBJModel.cpp" "CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o" "gcc" "CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o.d"
-  "/Users/twelvefacedjanus/Documents/mental.h/SDK/UI/CMentalImGui.cpp" "CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o" "gcc" "CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o.d"
-  "/Users/twelvefacedjanus/Documents/mental.h/SDK/WindowManager/CMentalWindowManager.cpp" "CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o" "gcc" "CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o.d"
+  "/Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp" "CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o" "gcc" "CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

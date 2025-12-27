@@ -114,10 +114,10 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}/External)
 
 # Collect source files (only .cpp files that aren't templates)
 set(SOURCES
-    SDK/Renderer/Object/CMentalFBXModel.cpp
-    SDK/Renderer/Object/CMentalOBJModel.cpp
-    SDK/WindowManager/CMentalWindowManager.cpp
-    SDK/UI/CMentalImGui.cpp
+#    SDK/Renderer/Object/CMentalFBXModel.cpp
+#    SDK/Renderer/Object/CMentalOBJModel.cpp
+#    SDK/WindowManager/CMentalWindowManager.cpp
+     SDK/SDK.cpp
 )
 
 # For header-only library, we still want to track headers
@@ -167,7 +167,7 @@ endif()
 target_link_libraries(MentalSDK PUBLIC ufbx_lib imgui_lib)
 
 # Create the example executable
-add_executable(mental_engine GameEngine/mental.cpp)
+add_executable(mental_engine Engine/mental.cpp)
 
 target_link_libraries(mental_engine PRIVATE
     MentalSDK
@@ -177,7 +177,7 @@ target_link_libraries(mental_engine PRIVATE
 add_custom_command(TARGET mental_engine POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/MentalEngine/bin
     COMMAND ${CMAKE_COMMAND} -E make_directory ${CMAKE_BINARY_DIR}/MentalEngine/common
-    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/GameEngine/Common ${CMAKE_BINARY_DIR}/MentalEngine/common
+    COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/Engine/Common ${CMAKE_BINARY_DIR}/MentalEngine/common
     COMMAND ${CMAKE_COMMAND} -E copy $<TARGET_FILE:mental_engine> ${CMAKE_BINARY_DIR}/MentalEngine/bin/
     COMMAND ${CMAKE_COMMAND} -E create_symlink bin/mental_engine ${CMAKE_BINARY_DIR}/MentalEngine/mental_engine
     COMMENT "Setting up MentalEngine directory structure and copying files"

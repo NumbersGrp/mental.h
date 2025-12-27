@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o"
-  "CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o.d"
+  "CMakeFiles/mental_engine.dir/Engine/mental.cpp.o"
+  "CMakeFiles/mental_engine.dir/Engine/mental.cpp.o.d"
   "mental_engine"
   "mental_engine.pdb"
 )

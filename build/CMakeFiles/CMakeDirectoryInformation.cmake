@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/Users/twelvefacedjanus/Documents/mental.h")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/Users/twelvefacedjanus/Documents/mental.h/build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/Users/twelvefacedjanus/Documents/mental.h/Build")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

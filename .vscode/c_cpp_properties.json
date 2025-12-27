@@ -4,7 +4,8 @@
             "name": "Mac",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/opt/homebrew/include"
+                "/opt/homebrew/include",
+                "${workspaceFolder}/SDK"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
@@ -12,7 +13,8 @@
             "cppStandard": "c++14",
             "intelliSenseMode": "macos-clang-arm64",
             "compilerArgs": [
-                "/opt/homebrew/include"
+                "/opt/homebrew/include",
+                "${workspacePath}/SDK/"
             ]
         }
     ],

@@ -60,7 +60,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/twelvefacedjanus/Documents/mental.h
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/twelvefacedjanus/Documents/mental.h/build
+CMAKE_BINARY_DIR = /Users/twelvefacedjanus/Documents/mental.h/Build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles /Users/twelvefacedjanus/Documents/mental.h/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles /Users/twelvefacedjanus/Documents/mental.h/Build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -212,6 +212,30 @@ mental_engine: cmake_check_build_system
 mental_engine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/build
 .PHONY : mental_engine/fast
+
+Engine/mental.o: Engine/mental.cpp.o
+.PHONY : Engine/mental.o
+
+# target to build an object file
+Engine/mental.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/Engine/mental.cpp.o
+.PHONY : Engine/mental.cpp.o
+
+Engine/mental.i: Engine/mental.cpp.i
+.PHONY : Engine/mental.i
+
+# target to preprocess a source file
+Engine/mental.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/Engine/mental.cpp.i
+.PHONY : Engine/mental.cpp.i
+
+Engine/mental.s: Engine/mental.cpp.s
+.PHONY : Engine/mental.s
+
+# target to generate assembly for a file
+Engine/mental.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/Engine/mental.cpp.s
+.PHONY : Engine/mental.cpp.s
 
 External/imgui/backends/imgui_impl_glfw.o: External/imgui/backends/imgui_impl_glfw.cpp.o
 .PHONY : External/imgui/backends/imgui_impl_glfw.o
@@ -405,125 +429,29 @@ External/ufbx/ufbx.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ufbx_lib.dir/build.make CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.s
 .PHONY : External/ufbx/ufbx.c.s
 
-GameEngine/mental.o: GameEngine/mental.cpp.o
-.PHONY : GameEngine/mental.o
+SDK/SDK.o: SDK/SDK.cpp.o
+.PHONY : SDK/SDK.o
 
 # target to build an object file
-GameEngine/mental.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.o
-.PHONY : GameEngine/mental.cpp.o
+SDK/SDK.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o
+.PHONY : SDK/SDK.cpp.o
 
-GameEngine/mental.i: GameEngine/mental.cpp.i
-.PHONY : GameEngine/mental.i
-
-# target to preprocess a source file
-GameEngine/mental.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.i
-.PHONY : GameEngine/mental.cpp.i
-
-GameEngine/mental.s: GameEngine/mental.cpp.s
-.PHONY : GameEngine/mental.s
-
-# target to generate assembly for a file
-GameEngine/mental.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/GameEngine/mental.cpp.s
-.PHONY : GameEngine/mental.cpp.s
-
-SDK/Renderer/Object/CMentalFBXModel.o: SDK/Renderer/Object/CMentalFBXModel.cpp.o
-.PHONY : SDK/Renderer/Object/CMentalFBXModel.o
-
-# target to build an object file
-SDK/Renderer/Object/CMentalFBXModel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o
-.PHONY : SDK/Renderer/Object/CMentalFBXModel.cpp.o
-
-SDK/Renderer/Object/CMentalFBXModel.i: SDK/Renderer/Object/CMentalFBXModel.cpp.i
-.PHONY : SDK/Renderer/Object/CMentalFBXModel.i
+SDK/SDK.i: SDK/SDK.cpp.i
+.PHONY : SDK/SDK.i
 
 # target to preprocess a source file
-SDK/Renderer/Object/CMentalFBXModel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.i
-.PHONY : SDK/Renderer/Object/CMentalFBXModel.cpp.i
+SDK/SDK.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.i
+.PHONY : SDK/SDK.cpp.i
 
-SDK/Renderer/Object/CMentalFBXModel.s: SDK/Renderer/Object/CMentalFBXModel.cpp.s
-.PHONY : SDK/Renderer/Object/CMentalFBXModel.s
-
-# target to generate assembly for a file
-SDK/Renderer/Object/CMentalFBXModel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.s
-.PHONY : SDK/Renderer/Object/CMentalFBXModel.cpp.s
-
-SDK/Renderer/Object/CMentalOBJModel.o: SDK/Renderer/Object/CMentalOBJModel.cpp.o
-.PHONY : SDK/Renderer/Object/CMentalOBJModel.o
-
-# target to build an object file
-SDK/Renderer/Object/CMentalOBJModel.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o
-.PHONY : SDK/Renderer/Object/CMentalOBJModel.cpp.o
-
-SDK/Renderer/Object/CMentalOBJModel.i: SDK/Renderer/Object/CMentalOBJModel.cpp.i
-.PHONY : SDK/Renderer/Object/CMentalOBJModel.i
-
-# target to preprocess a source file
-SDK/Renderer/Object/CMentalOBJModel.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.i
-.PHONY : SDK/Renderer/Object/CMentalOBJModel.cpp.i
-
-SDK/Renderer/Object/CMentalOBJModel.s: SDK/Renderer/Object/CMentalOBJModel.cpp.s
-.PHONY : SDK/Renderer/Object/CMentalOBJModel.s
+SDK/SDK.s: SDK/SDK.cpp.s
+.PHONY : SDK/SDK.s
 
 # target to generate assembly for a file
-SDK/Renderer/Object/CMentalOBJModel.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.s
-.PHONY : SDK/Renderer/Object/CMentalOBJModel.cpp.s
-
-SDK/UI/CMentalImGui.o: SDK/UI/CMentalImGui.cpp.o
-.PHONY : SDK/UI/CMentalImGui.o
-
-# target to build an object file
-SDK/UI/CMentalImGui.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o
-.PHONY : SDK/UI/CMentalImGui.cpp.o
-
-SDK/UI/CMentalImGui.i: SDK/UI/CMentalImGui.cpp.i
-.PHONY : SDK/UI/CMentalImGui.i
-
-# target to preprocess a source file
-SDK/UI/CMentalImGui.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.i
-.PHONY : SDK/UI/CMentalImGui.cpp.i
-
-SDK/UI/CMentalImGui.s: SDK/UI/CMentalImGui.cpp.s
-.PHONY : SDK/UI/CMentalImGui.s
-
-# target to generate assembly for a file
-SDK/UI/CMentalImGui.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.s
-.PHONY : SDK/UI/CMentalImGui.cpp.s
-
-SDK/WindowManager/CMentalWindowManager.o: SDK/WindowManager/CMentalWindowManager.cpp.o
-.PHONY : SDK/WindowManager/CMentalWindowManager.o
-
-# target to build an object file
-SDK/WindowManager/CMentalWindowManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o
-.PHONY : SDK/WindowManager/CMentalWindowManager.cpp.o
-
-SDK/WindowManager/CMentalWindowManager.i: SDK/WindowManager/CMentalWindowManager.cpp.i
-.PHONY : SDK/WindowManager/CMentalWindowManager.i
-
-# target to preprocess a source file
-SDK/WindowManager/CMentalWindowManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.i
-.PHONY : SDK/WindowManager/CMentalWindowManager.cpp.i
-
-SDK/WindowManager/CMentalWindowManager.s: SDK/WindowManager/CMentalWindowManager.cpp.s
-.PHONY : SDK/WindowManager/CMentalWindowManager.s
-
-# target to generate assembly for a file
-SDK/WindowManager/CMentalWindowManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.s
-.PHONY : SDK/WindowManager/CMentalWindowManager.cpp.s
+SDK/SDK.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.s
+.PHONY : SDK/SDK.cpp.s
 
 # Help Target
 help:
@@ -541,6 +469,9 @@ help:
 	@echo "... imgui_lib"
 	@echo "... mental_engine"
 	@echo "... ufbx_lib"
+	@echo "... Engine/mental.o"
+	@echo "... Engine/mental.i"
+	@echo "... Engine/mental.s"
 	@echo "... External/imgui/backends/imgui_impl_glfw.o"
 	@echo "... External/imgui/backends/imgui_impl_glfw.i"
 	@echo "... External/imgui/backends/imgui_impl_glfw.s"
@@ -565,21 +496,9 @@ help:
 	@echo "... External/ufbx/ufbx.o"
 	@echo "... External/ufbx/ufbx.i"
 	@echo "... External/ufbx/ufbx.s"
-	@echo "... GameEngine/mental.o"
-	@echo "... GameEngine/mental.i"
-	@echo "... GameEngine/mental.s"
-	@echo "... SDK/Renderer/Object/CMentalFBXModel.o"
-	@echo "... SDK/Renderer/Object/CMentalFBXModel.i"
-	@echo "... SDK/Renderer/Object/CMentalFBXModel.s"
-	@echo "... SDK/Renderer/Object/CMentalOBJModel.o"
-	@echo "... SDK/Renderer/Object/CMentalOBJModel.i"
-	@echo "... SDK/Renderer/Object/CMentalOBJModel.s"
-	@echo "... SDK/UI/CMentalImGui.o"
-	@echo "... SDK/UI/CMentalImGui.i"
-	@echo "... SDK/UI/CMentalImGui.s"
-	@echo "... SDK/WindowManager/CMentalWindowManager.o"
-	@echo "... SDK/WindowManager/CMentalWindowManager.i"
-	@echo "... SDK/WindowManager/CMentalWindowManager.s"
+	@echo "... SDK/SDK.o"
+	@echo "... SDK/SDK.i"
+	@echo "... SDK/SDK.s"
 .PHONY : help
 
 

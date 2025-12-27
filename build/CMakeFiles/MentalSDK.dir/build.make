@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/twelvefacedjanus/Documents/mental.h
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/twelvefacedjanus/Documents/mental.h/build
+CMAKE_BINARY_DIR = /Users/twelvefacedjanus/Documents/mental.h/Build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/MentalSDK.dir/depend.make
@@ -72,79 +72,31 @@ include CMakeFiles/MentalSDK.dir/flags.make
 CMakeFiles/MentalSDK.dir/codegen:
 .PHONY : CMakeFiles/MentalSDK.dir/codegen
 
-CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o: CMakeFiles/MentalSDK.dir/flags.make
-CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o: /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Object/CMentalFBXModel.cpp
-CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o: CMakeFiles/MentalSDK.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o -MF CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o.d -o CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Object/CMentalFBXModel.cpp
+CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o: CMakeFiles/MentalSDK.dir/flags.make
+CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o: /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp
+CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o: CMakeFiles/MentalSDK.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o -MF CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o.d -o CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp
 
-CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Object/CMentalFBXModel.cpp > CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.i
+CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp > CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.i
 
-CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Object/CMentalFBXModel.cpp -o CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.s
-
-CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o: CMakeFiles/MentalSDK.dir/flags.make
-CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o: /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Object/CMentalOBJModel.cpp
-CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o: CMakeFiles/MentalSDK.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o -MF CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o.d -o CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Object/CMentalOBJModel.cpp
-
-CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Object/CMentalOBJModel.cpp > CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.i
-
-CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Object/CMentalOBJModel.cpp -o CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.s
-
-CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o: CMakeFiles/MentalSDK.dir/flags.make
-CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o: /Users/twelvefacedjanus/Documents/mental.h/SDK/WindowManager/CMentalWindowManager.cpp
-CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o: CMakeFiles/MentalSDK.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o -MF CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o.d -o CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/SDK/WindowManager/CMentalWindowManager.cpp
-
-CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/SDK/WindowManager/CMentalWindowManager.cpp > CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.i
-
-CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/SDK/WindowManager/CMentalWindowManager.cpp -o CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.s
-
-CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o: CMakeFiles/MentalSDK.dir/flags.make
-CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o: /Users/twelvefacedjanus/Documents/mental.h/SDK/UI/CMentalImGui.cpp
-CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o: CMakeFiles/MentalSDK.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o -MF CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o.d -o CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/SDK/UI/CMentalImGui.cpp
-
-CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/SDK/UI/CMentalImGui.cpp > CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.i
-
-CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/SDK/UI/CMentalImGui.cpp -o CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.s
+CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp -o CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.s
 
 # Object files for target MentalSDK
 MentalSDK_OBJECTS = \
-"CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o" \
-"CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o" \
-"CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o" \
-"CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o"
+"CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o"
 
 # External object files for target MentalSDK
 MentalSDK_EXTERNAL_OBJECTS =
 
-libMentalSDK.a: CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalFBXModel.cpp.o
-libMentalSDK.a: CMakeFiles/MentalSDK.dir/SDK/Renderer/Object/CMentalOBJModel.cpp.o
-libMentalSDK.a: CMakeFiles/MentalSDK.dir/SDK/WindowManager/CMentalWindowManager.cpp.o
-libMentalSDK.a: CMakeFiles/MentalSDK.dir/SDK/UI/CMentalImGui.cpp.o
+libMentalSDK.a: CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o
 libMentalSDK.a: CMakeFiles/MentalSDK.dir/build.make
 libMentalSDK.a: CMakeFiles/MentalSDK.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libMentalSDK.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libMentalSDK.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/MentalSDK.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MentalSDK.dir/link.txt --verbose=$(VERBOSE)
 
@@ -157,6 +109,6 @@ CMakeFiles/MentalSDK.dir/clean:
 .PHONY : CMakeFiles/MentalSDK.dir/clean
 
 CMakeFiles/MentalSDK.dir/depend:
-	cd /Users/twelvefacedjanus/Documents/mental.h/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h/build /Users/twelvefacedjanus/Documents/mental.h/build /Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/MentalSDK.dir/DependInfo.cmake "--color=$(COLOR)" MentalSDK
+	cd /Users/twelvefacedjanus/Documents/mental.h/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h/Build /Users/twelvefacedjanus/Documents/mental.h/Build /Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles/MentalSDK.dir/DependInfo.cmake "--color=$(COLOR)" MentalSDK
 .PHONY : CMakeFiles/MentalSDK.dir/depend
 

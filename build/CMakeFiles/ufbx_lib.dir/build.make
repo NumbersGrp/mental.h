@@ -56,7 +56,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /Users/twelvefacedjanus/Documents/mental.h
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/twelvefacedjanus/Documents/mental.h/build
+CMAKE_BINARY_DIR = /Users/twelvefacedjanus/Documents/mental.h/Build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ufbx_lib.dir/depend.make
@@ -75,16 +75,16 @@ CMakeFiles/ufbx_lib.dir/codegen:
 CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o: CMakeFiles/ufbx_lib.dir/flags.make
 CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o: /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c
 CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o: CMakeFiles/ufbx_lib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o -MF CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o.d -o CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o -c /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o"
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o -MF CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o.d -o CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o -c /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c
 
 CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c > CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.i
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c > CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.i
 
 CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c -o CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.s
+	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c -o CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.s
 
 # Object files for target ufbx_lib
 ufbx_lib_OBJECTS = \
@@ -96,7 +96,7 @@ ufbx_lib_EXTERNAL_OBJECTS =
 libufbx_lib.a: CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o
 libufbx_lib.a: CMakeFiles/ufbx_lib.dir/build.make
 libufbx_lib.a: CMakeFiles/ufbx_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libufbx_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libufbx_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/ufbx_lib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ufbx_lib.dir/link.txt --verbose=$(VERBOSE)
 
@@ -109,6 +109,6 @@ CMakeFiles/ufbx_lib.dir/clean:
 .PHONY : CMakeFiles/ufbx_lib.dir/clean
 
 CMakeFiles/ufbx_lib.dir/depend:
-	cd /Users/twelvefacedjanus/Documents/mental.h/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h/build /Users/twelvefacedjanus/Documents/mental.h/build /Users/twelvefacedjanus/Documents/mental.h/build/CMakeFiles/ufbx_lib.dir/DependInfo.cmake "--color=$(COLOR)" ufbx_lib
+	cd /Users/twelvefacedjanus/Documents/mental.h/Build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h /Users/twelvefacedjanus/Documents/mental.h/Build /Users/twelvefacedjanus/Documents/mental.h/Build /Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles/ufbx_lib.dir/DependInfo.cmake "--color=$(COLOR)" ufbx_lib
 .PHONY : CMakeFiles/ufbx_lib.dir/depend
 
