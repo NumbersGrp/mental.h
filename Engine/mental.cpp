@@ -1,8 +1,4 @@
-#include "../SDK/Objects/Object.hpp"
-#include "../SDK/Objects/World.hpp"
-#include "../SDK/Objects/Environment.hpp"
-#include "../SDK/Window/Window.hpp"
-#include "../SDK/Renderer/Renderer.hpp"
+#include "../SDK/SDK.hpp"
 #include <iostream>
 #include <memory>
 
@@ -17,14 +13,20 @@ int main() {
         auto world = std::make_shared<mentalsdk::CMentalWorld>();
         
         auto environment = std::make_shared<mentalsdk::CMentalEnvironment>();
-        environment->setColor(0.3F, 0.2F, 0.7F, 1.0F );
+        environment->setColor(0.3F, 0.2F, 0.7F, 1.0F);
+        
+        // Create a triangle using the new factory method
+        auto triangle = mentalsdk::CMentalObject::createTriangle("MyTriangle");
+        auto shader = std::make_unique<mentalsdk::CMentalShader>();
+        shader->loadFromFiles("vertex_shader.glsl", "fragment_shader.glsl");
+        triangle->setShader(std::move(shader));
         
         auto camera = std::make_shared<mentalsdk::CMentalObject>("Camera", mentalsdk::CMentalObjectType::Camera);
         auto moonObject = std::make_shared<mentalsdk::CMentalObject>("Moon", mentalsdk::CMentalObjectType::ObjModel);
         
         world->setEnvironment(environment);
-        world->setNode("Camera", camera);
-        world->setNode("Moon Object", moonObject);
+        world->setNode("Triangle", triangle);
+        // world->setNode("Camera", camera);  // Camera doesn't need rendering yet
 
         renderer->addCommandToPool([&world]() { world->render(); });
         window.setRenderPool(renderer);

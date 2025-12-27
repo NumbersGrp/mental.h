@@ -8,10 +8,11 @@
 #include <utility>
 #include <vector>
 #include <memory>
+#include <iostream>
 #include "../Utils/Utils.hpp"
-#include "Shader.hpp"
 #include "Texture.hpp"
 #include "Environment.hpp"
+#include "../Renderer/Shader.hpp"
 
 namespace mentalsdk
 {
@@ -82,30 +83,77 @@ public:
     }
 
     void initializeTriangle() {
-        // Convert raw float data to Vertex objects
+        // Convert raw float data to Vertex objects - BIGGER triangle
         this->vertices_.clear();
         this->vertices_.reserve(3); // Triangle has 3 vertices
         
-        // Vertex 1: bottom left
+        // Vertex 1: bottom left - BIGGER
         this->vertices_.emplace_back(Vertex{
-            glm::vec3(-0.5F, -0.5F, 0.0F),  // position
+            glm::vec3(-1.0F, -1.0F, 0.0F),  // position (bigger)
             glm::vec3(0.0F, 0.0F, 1.0F),    // normal (pointing towards camera)
             glm::vec2(0.0F, 0.0F)           // texture coordinate
         });
         
-        // Vertex 2: bottom right  
+        // Vertex 2: bottom right - BIGGER
         this->vertices_.emplace_back(Vertex{
-            glm::vec3(0.5F, -0.5F, 0.0F),   // position
+            glm::vec3(1.0F, -1.0F, 0.0F),   // position (bigger)
             glm::vec3(0.0F, 0.0F, 1.0F),    // normal
             glm::vec2(1.0F, 0.0F)           // texture coordinate
         });
         
-        // Vertex 3: top
+        // Vertex 3: top - BIGGER
         this->vertices_.emplace_back(Vertex{
-            glm::vec3(0.0F, 0.5F, 0.0F),    // position
+            glm::vec3(0.0F, 1.0F, 0.0F),    // position (bigger)
             glm::vec3(0.0F, 0.0F, 1.0F),    // normal
             glm::vec2(0.5F, 1.0F)           // texture coordinate
         });
+        
+        // Set up indices for triangle
+        this->indices_ = {0, 1, 2};
+        
+        // Set up OpenGL buffers
+        this->setupBuffers();
+    }
+
+    static std::shared_ptr<CMentalObject> createTriangle(const std::string& name = "Triangle") {
+        auto triangle = std::make_shared<CMentalObject>(name, CMentalObjectType::Triangle);
+        triangle->initializeTriangle();
+        std::cout << "Created triangle '" << name << "' with " << triangle->vertices_.size() << " vertices\n";
+        return triangle;
+    }
+
+    void setupBuffers() {
+        // Generate buffers
+        glGenVertexArrays(1, &vao_);
+        glGenBuffers(1, &vbo_);
+        glGenBuffers(1, &ebo_);
+        
+        // Bind VAO
+        glBindVertexArray(vao_);
+        
+        // Bind and fill VBO
+        glBindBuffer(GL_ARRAY_BUFFER, vbo_);
+        glBufferData(GL_ARRAY_BUFFER, vertices_.size() * sizeof(Vertex), vertices_.data(), GL_STATIC_DRAW);
+        
+        // Bind and fill EBO
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, ebo_);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices_.size() * sizeof(unsigned int), indices_.data(), GL_STATIC_DRAW);
+        
+        // Set vertex attribute pointers
+        // Position attribute (location = 0)
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, position)));
+        glEnableVertexAttribArray(0);
+        
+        // Normal attribute (location = 1)
+        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, normal)));
+        glEnableVertexAttribArray(1);
+        
+        // Texture coordinate attribute (location = 2)
+        glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), reinterpret_cast<void*>(offsetof(Vertex, texCoord)));
+        glEnableVertexAttribArray(2);
+        
+        // Unbind VAO
+        glBindVertexArray(0);
     }
 
     void setNext(std::shared_ptr<CMentalObject> nextNode) { 
@@ -120,10 +168,48 @@ public:
 
     bool loadFromFile(const std::string& filePath);
 
-    void setShader(std::unique_ptr<CMentalShader> shader) { this->shader_ = std::move(shader); }
+    void setShader(std::unique_ptr<CMentalShader> shader) { 
+        this->shader_ = std::move(shader); 
+    }
     void setTexture(std::unique_ptr<CMentalTexture> texture) { this->texture_ = std::move(texture); }
     
-    void render(const glm::mat4& model, const glm::mat4& view, const glm::mat4& projection) const; // TODO: implement it
+    void render(const glm::mat4& model, const glm::mat4& view, const glm::mat4& projection) const {
+        if (!shader_ || !shader_->isValid()) {
+            std::cerr << "Warning: No valid shader for object rendering\n";
+            return; // No shader or invalid shader, can't render
+        }
+        
+        // Use the shader
+        shader_->use();
+        
+        // Set matrices
+        shader_->setMat4("model", model);
+        shader_->setMat4("view", view);
+        shader_->setMat4("projection", projection);
+        
+        // Bind texture if available
+        if (texture_ && texture_->isValid()) {
+            texture_->bind(0); // Bind to texture unit 0
+            shader_->setInt("texture1", 0);
+        }
+        
+        // Bind VAO and draw
+        glBindVertexArray(vao_);
+        
+        if (!indices_.empty()) {
+            glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(indices_.size()), GL_UNSIGNED_INT, nullptr);
+        } else {
+            glDrawArrays(GL_TRIANGLES, 0, static_cast<GLsizei>(vertices_.size()));
+        }
+        
+        glBindVertexArray(0);
+        
+        // Check for OpenGL errors
+        GLenum error = glGetError();
+        if (error != GL_NO_ERROR) {
+            std::cerr << "OpenGL error during rendering: " << error << "\n";
+        }
+    }
 
     void cleanup() {
         glDeleteVertexArrays(1, &vao_);

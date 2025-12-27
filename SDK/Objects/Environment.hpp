@@ -12,7 +12,7 @@ class CMentalEnvironment
 {
 private:
     MentalEnvironmentType type_ = MentalEnvironmentType::ClearColor;
-    float color_[3] = {1.0F, 1.0F, 1.0F};
+    float color_[4] = {1.0F, 1.0F, 1.0F, 1.0F};
 
 public:
     CMentalEnvironment() = default;
@@ -24,7 +24,10 @@ public:
     CMentalEnvironment& operator=(CMentalEnvironment&&) = delete;
 
     void setColor(float red = 1.0F, float green = 1.0F, float blue = 1.0F, float alpha = 1.0F) {
-        this->color_[0] = red; this->color_[1] = green; this->color_[2] = blue; this->color_[4] = alpha;
+        this->color_[0] = red; 
+        this->color_[1] = green; 
+        this->color_[2] = blue; 
+        this->color_[3] = alpha;
     }
 
     void renderClearColor() {

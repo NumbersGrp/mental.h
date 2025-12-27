@@ -13,7 +13,7 @@ namespace mentalsdk
 
 const int MAX_LOG_INFO_LENGTH = 512;
 
-class CShader
+class CMentalShader
 {
 private:
     GLuint programID_ = 0;
@@ -67,18 +67,41 @@ private:
     }
 
 public:
-    CShader() = default;
-    ~CShader();
+    CMentalShader() = default;
+    CMentalShader(const std::string& vertexPath, const std::string& fragmentPath) {
+        loadFromFiles(vertexPath, fragmentPath);
+    }
+    ~CMentalShader() = default;
 
-    CShader(const CShader&) = delete;
-    CShader& operator=(const CShader&) = delete;
-    CShader(CShader&&) = delete;
-    CShader& operator=(CShader&&) = delete;
+    CMentalShader(const CMentalShader&) = delete;
+    CMentalShader& operator=(const CMentalShader&) = delete;
+    CMentalShader(CMentalShader&&) = delete;
+    CMentalShader& operator=(CMentalShader&&) = delete;
 
     void loadFromFiles(const std::string& vertexPath, const std::string& fragmentPath) {
+        std::cout << "Loading shaders: " << vertexPath << " and " << fragmentPath << "\n";
         const std::string& vertexData = this->readFile(vertexPath);
         const std::string& fragmentData = this->readFile(fragmentPath);
+        
+        if (vertexData.empty()) {
+            std::cerr << "Error: Could not read vertex shader file: " << vertexPath << "\n";
+            return;
+        }
+        if (fragmentData.empty()) {
+            std::cerr << "Error: Could not read fragment shader file: " << fragmentPath << "\n";
+            return;
+        }
+        
+        std::cout << "Vertex shader loaded (" << vertexData.length() << " chars)\n";
+        std::cout << "Fragment shader loaded (" << fragmentData.length() << " chars)\n";
+        
         this->createShaderProgram(vertexData, fragmentData);
+        
+        if (this->isValid()) {
+            std::cout << "Shader program created successfully with ID: " << programID_ << "\n";
+        } else {
+            std::cerr << "Failed to create shader program\n";
+        }
     }
 
     void use() const;

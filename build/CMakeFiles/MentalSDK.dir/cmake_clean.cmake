@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o"
+  "CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o.d"
   "CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o"
   "CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o.d"
   "libMentalSDK.a"

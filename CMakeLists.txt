@@ -118,6 +118,7 @@ set(SOURCES
 #    SDK/Renderer/Object/CMentalOBJModel.cpp
 #    SDK/WindowManager/CMentalWindowManager.cpp
      SDK/SDK.cpp
+     SDK/Renderer/Shader.cpp
 )
 
 # For header-only library, we still want to track headers

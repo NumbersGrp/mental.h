@@ -85,7 +85,7 @@
 					],
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Release-f594a3540b6fd45bde16.json",
+					"jsonFile" : "directory-.-Release-0646bee956ba39fe4055.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -136,7 +136,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "MentalSDK::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-MentalSDK-Release-9d60d699afa878337096.json",
+					"jsonFile" : "target-MentalSDK-Release-25fffe4c2dee5d29c6f6.json",
 					"name" : "MentalSDK",
 					"projectIndex" : 0
 				},
@@ -150,7 +150,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "mental_engine::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-mental_engine-Release-ef55e23aa8d777ae18be.json",
+					"jsonFile" : "target-mental_engine-Release-1a072c301ad0d7895b27.json",
 					"name" : "mental_engine",
 					"projectIndex" : 0
 				},

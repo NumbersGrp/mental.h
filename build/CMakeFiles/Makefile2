@@ -94,7 +94,7 @@ clean: CMakeFiles/mental_engine.dir/clean
 CMakeFiles/ufbx_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ufbx_lib.dir/build.make CMakeFiles/ufbx_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ufbx_lib.dir/build.make CMakeFiles/ufbx_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=13,14 "Built target ufbx_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=14,15 "Built target ufbx_lib"
 .PHONY : CMakeFiles/ufbx_lib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -111,7 +111,7 @@ ufbx_lib: CMakeFiles/ufbx_lib.dir/rule
 # codegen rule for target.
 CMakeFiles/ufbx_lib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ufbx_lib.dir/build.make CMakeFiles/ufbx_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=13,14 "Finished codegen for target ufbx_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=14,15 "Finished codegen for target ufbx_lib"
 .PHONY : CMakeFiles/ufbx_lib.dir/codegen
 
 # clean rule for target.
@@ -126,7 +126,7 @@ CMakeFiles/ufbx_lib.dir/clean:
 CMakeFiles/imgui_lib.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10 "Built target imgui_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11 "Built target imgui_lib"
 .PHONY : CMakeFiles/imgui_lib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -143,7 +143,7 @@ imgui_lib: CMakeFiles/imgui_lib.dir/rule
 # codegen rule for target.
 CMakeFiles/imgui_lib.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/imgui_lib.dir/build.make CMakeFiles/imgui_lib.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=3,4,5,6,7,8,9,10 "Finished codegen for target imgui_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11 "Finished codegen for target imgui_lib"
 .PHONY : CMakeFiles/imgui_lib.dir/codegen
 
 # clean rule for target.
@@ -159,12 +159,12 @@ CMakeFiles/MentalSDK.dir/all: CMakeFiles/ufbx_lib.dir/all
 CMakeFiles/MentalSDK.dir/all: CMakeFiles/imgui_lib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=1,2 "Built target MentalSDK"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=1,2,3 "Built target MentalSDK"
 .PHONY : CMakeFiles/MentalSDK.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MentalSDK.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MentalSDK.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles 0
 .PHONY : CMakeFiles/MentalSDK.dir/rule
@@ -176,7 +176,7 @@ MentalSDK: CMakeFiles/MentalSDK.dir/rule
 # codegen rule for target.
 CMakeFiles/MentalSDK.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=1,2 "Finished codegen for target MentalSDK"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target MentalSDK"
 .PHONY : CMakeFiles/MentalSDK.dir/codegen
 
 # clean rule for target.
@@ -193,12 +193,12 @@ CMakeFiles/mental_engine.dir/all: CMakeFiles/imgui_lib.dir/all
 CMakeFiles/mental_engine.dir/all: CMakeFiles/MentalSDK.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=11,12 "Built target mental_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=12,13 "Built target mental_engine"
 .PHONY : CMakeFiles/mental_engine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/mental_engine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/mental_engine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles 0
 .PHONY : CMakeFiles/mental_engine.dir/rule
@@ -210,7 +210,7 @@ mental_engine: CMakeFiles/mental_engine.dir/rule
 # codegen rule for target.
 CMakeFiles/mental_engine.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/mental_engine.dir/build.make CMakeFiles/mental_engine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=11,12 "Finished codegen for target mental_engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=12,13 "Finished codegen for target mental_engine"
 .PHONY : CMakeFiles/mental_engine.dir/codegen
 
 # clean rule for target.

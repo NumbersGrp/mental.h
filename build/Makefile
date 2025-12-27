@@ -429,6 +429,30 @@ External/ufbx/ufbx.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ufbx_lib.dir/build.make CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.s
 .PHONY : External/ufbx/ufbx.c.s
 
+SDK/Renderer/Shader.o: SDK/Renderer/Shader.cpp.o
+.PHONY : SDK/Renderer/Shader.o
+
+# target to build an object file
+SDK/Renderer/Shader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o
+.PHONY : SDK/Renderer/Shader.cpp.o
+
+SDK/Renderer/Shader.i: SDK/Renderer/Shader.cpp.i
+.PHONY : SDK/Renderer/Shader.i
+
+# target to preprocess a source file
+SDK/Renderer/Shader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.i
+.PHONY : SDK/Renderer/Shader.cpp.i
+
+SDK/Renderer/Shader.s: SDK/Renderer/Shader.cpp.s
+.PHONY : SDK/Renderer/Shader.s
+
+# target to generate assembly for a file
+SDK/Renderer/Shader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MentalSDK.dir/build.make CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.s
+.PHONY : SDK/Renderer/Shader.cpp.s
+
 SDK/SDK.o: SDK/SDK.cpp.o
 .PHONY : SDK/SDK.o
 
@@ -496,6 +520,9 @@ help:
 	@echo "... External/ufbx/ufbx.o"
 	@echo "... External/ufbx/ufbx.i"
 	@echo "... External/ufbx/ufbx.s"
+	@echo "... SDK/Renderer/Shader.o"
+	@echo "... SDK/Renderer/Shader.i"
+	@echo "... SDK/Renderer/Shader.s"
 	@echo "... SDK/SDK.o"
 	@echo "... SDK/SDK.i"
 	@echo "... SDK/SDK.s"

@@ -2,9 +2,11 @@
 
 #include "../Renderer/Renderer.hpp"
 #define GL_SILENCE_DEPRECATION
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 #include <memory>
 #include <stdexcept>
+#include <iostream>
 #include "../Math/Math.hpp"
 
 namespace mentalsdk
@@ -52,6 +54,12 @@ public:
         
         window_.reset(window);
         glfwMakeContextCurrent(window);
+        
+        // Initialize GLEW after creating OpenGL context
+        if (glewInit() != GLEW_OK) {
+            throw std::runtime_error("Failed to initialize GLEW");
+        }
+        
         glEnable(GL_DEPTH_TEST);
     }
 

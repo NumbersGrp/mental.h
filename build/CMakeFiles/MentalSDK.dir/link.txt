@@ -1,2 +1,2 @@
-/usr/bin/ar qc libMentalSDK.a CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o
+/usr/bin/ar qc libMentalSDK.a CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o
 /usr/bin/ranlib libMentalSDK.a

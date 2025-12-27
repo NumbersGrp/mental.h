@@ -1,6 +1,8 @@
 #pragma once
 #include <map>
 #include <memory>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #include "Objects/Object.hpp"
 #include "Environment.hpp"
 
@@ -36,9 +38,25 @@ public:
             environment_->renderClearColor();
         }
         
-        // Then render all objects
+        // Set up basic matrices (you'll want to make these configurable later)
+        glm::mat4 model = glm::mat4(1.0f);
+        glm::mat4 view = glm::lookAt(
+            glm::vec3(0.0f, 0.0f, 3.0f),   // Camera position
+            glm::vec3(0.0f, 0.0f, 0.0f),   // Look at origin
+            glm::vec3(0.0f, 1.0f, 0.0f)    // Up vector
+        );
+        glm::mat4 projection = glm::perspective(
+            glm::radians(45.0f),           // FOV
+            800.0f / 600.0f,               // Aspect ratio (you'll want to get this from window)
+            0.1f,                          // Near plane
+            100.0f                         // Far plane
+        );
+        
+        // Render all objects with proper matrices
         for (const auto& [name, object]: *hierarchy_) {
-            if (object) { object->render(); }
+            if (object) { 
+                object->render(model, view, projection);
+            }
         }
     }
 };

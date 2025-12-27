@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Shader.cpp" "CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o" "gcc" "CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o.d"
   "/Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp" "CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o" "gcc" "CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o.d"
   )
 
