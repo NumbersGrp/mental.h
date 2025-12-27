@@ -81,6 +81,33 @@ public:
         }
     }
 
+    void initializeTriangle() {
+        // Convert raw float data to Vertex objects
+        this->vertices_.clear();
+        this->vertices_.reserve(3); // Triangle has 3 vertices
+        
+        // Vertex 1: bottom left
+        this->vertices_.emplace_back(Vertex{
+            glm::vec3(-0.5F, -0.5F, 0.0F),  // position
+            glm::vec3(0.0F, 0.0F, 1.0F),    // normal (pointing towards camera)
+            glm::vec2(0.0F, 0.0F)           // texture coordinate
+        });
+        
+        // Vertex 2: bottom right  
+        this->vertices_.emplace_back(Vertex{
+            glm::vec3(0.5F, -0.5F, 0.0F),   // position
+            glm::vec3(0.0F, 0.0F, 1.0F),    // normal
+            glm::vec2(1.0F, 0.0F)           // texture coordinate
+        });
+        
+        // Vertex 3: top
+        this->vertices_.emplace_back(Vertex{
+            glm::vec3(0.0F, 0.5F, 0.0F),    // position
+            glm::vec3(0.0F, 0.0F, 1.0F),    // normal
+            glm::vec2(0.5F, 1.0F)           // texture coordinate
+        });
+    }
+
     void setNext(std::shared_ptr<CMentalObject> nextNode) { 
         this->nextNode_.emplace_back(std::move(nextNode)); 
     }
