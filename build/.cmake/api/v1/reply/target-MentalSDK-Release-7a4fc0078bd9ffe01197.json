@@ -29,55 +29,67 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 130,
+				"line" : 163,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 188,
+				"line" : 230,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 168,
+				"line" : 210,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 140,
+				"line" : 173,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 154,
+				"line" : 187,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 162,
+				"line" : 195,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 203,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 112,
+				"line" : 145,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 113,
+				"line" : 146,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 133,
+				"line" : 166,
+				"parent" : 0
+			},
+			{
+				"command" : 4,
+				"file" : 0,
+				"line" : 202,
 				"parent" : 0
 			}
 		]
@@ -137,19 +149,23 @@
 			"frameworks" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"path" : "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/OpenGL.framework"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 7,
+					"backtrace" : 8,
 					"path" : "/Users/twelvefacedjanus/Documents/mental.h/SDK"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 9,
 					"path" : "/Users/twelvefacedjanus/Documents/mental.h/External"
+				},
+				{
+					"backtrace" : 11,
+					"path" : "/opt/homebrew/include/lua"
 				},
 				{
 					"backtrace" : 3,
@@ -257,6 +273,10 @@
 			"id" : "glm::glm::@6890427a1f51a3e7e1df"
 		},
 		{
+			"backtrace" : 7,
+			"fragment" : "/opt/homebrew/lib/liblua5.4.dylib"
+		},
+		{
 			"backtrace" : 3,
 			"id" : "ufbx_lib::@6890427a1f51a3e7e1df"
 		},
@@ -286,6 +306,10 @@
 		{
 			"backtrace" : 6,
 			"id" : "glm::glm::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 7,
+			"fragment" : "/opt/homebrew/lib/liblua5.4.dylib"
 		},
 		{
 			"backtrace" : 3,

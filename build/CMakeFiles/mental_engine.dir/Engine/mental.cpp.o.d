@@ -1142,6 +1142,9 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: \
   /Users/twelvefacedjanus/Documents/mental.h/Engine/../SDK/Objects/Texture.hpp \
   /Users/twelvefacedjanus/Documents/mental.h/Engine/../SDK/Objects/Environment.hpp \
   /Users/twelvefacedjanus/Documents/mental.h/Engine/../SDK/Objects/../Renderer/Shader.hpp \
+  /Users/twelvefacedjanus/Documents/mental.h/Engine/../SDK/Objects/Script.hpp \
+  /opt/homebrew/include/lua/lua.h /opt/homebrew/include/lua/luaconf.h \
+  /opt/homebrew/include/lua/lauxlib.h /opt/homebrew/include/lua/lualib.h \
   /Users/twelvefacedjanus/Documents/mental.h/Engine/../SDK/Objects/World.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \

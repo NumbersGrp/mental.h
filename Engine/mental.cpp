@@ -17,10 +17,8 @@ int main() {
         
         // Create a triangle using the new factory method
         auto triangle = mentalsdk::CMentalObject::createTriangle("MyTriangle");
-        auto shader = std::make_unique<mentalsdk::CMentalShader>();
-        shader->loadFromFiles("vertex_shader.glsl", "fragment_shader.glsl");
-        shader->enableHotReload(true);  // Enable hot reload
-        triangle->setShader(std::move(shader));
+        triangle->connectShader("common/Shaders/default_vertex.glsl", "common/Shaders/default_fragment.glsl");
+        triangle->connectScript("common/Scripts/rotate_script.lua");
         
         auto camera = std::make_shared<mentalsdk::CMentalObject>("Camera", mentalsdk::CMentalObjectType::Camera);
         auto moonObject = std::make_shared<mentalsdk::CMentalObject>("Moon", mentalsdk::CMentalObjectType::ObjModel);

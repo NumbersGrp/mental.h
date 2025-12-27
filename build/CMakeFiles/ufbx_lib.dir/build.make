@@ -76,15 +76,15 @@ CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o: CMakeFiles/ufbx_lib.dir/flags.ma
 CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o: /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c
 CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o: CMakeFiles/ufbx_lib.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o -MF CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o.d -o CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o -c /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o -MF CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o.d -o CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.o -c /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c
 
 CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.i"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c > CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c > CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.i
 
 CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.s"
-	/usr/bin/clang $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c -o CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/External/ufbx/ufbx.c -o CMakeFiles/ufbx_lib.dir/External/ufbx/ufbx.c.s
 
 # Object files for target ufbx_lib
 ufbx_lib_OBJECTS = \

@@ -76,29 +76,29 @@ CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o: CMakeFiles/MentalSDK.dir/flags.make
 CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o: /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp
 CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o: CMakeFiles/MentalSDK.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o -MF CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o.d -o CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o -MF CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o.d -o CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp
 
 CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp > CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp > CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.i
 
 CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp -o CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/SDK/SDK.cpp -o CMakeFiles/MentalSDK.dir/SDK/SDK.cpp.s
 
 CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o: CMakeFiles/MentalSDK.dir/flags.make
 CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o: /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Shader.cpp
 CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o: CMakeFiles/MentalSDK.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o -MF CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o.d -o CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Shader.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o -MF CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o.d -o CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Shader.cpp
 
 CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Shader.cpp > CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Shader.cpp > CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.i
 
 CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Shader.cpp -o CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Shader.cpp -o CMakeFiles/MentalSDK.dir/SDK/Renderer/Shader.cpp.s
 
 # Object files for target MentalSDK
 MentalSDK_OBJECTS = \

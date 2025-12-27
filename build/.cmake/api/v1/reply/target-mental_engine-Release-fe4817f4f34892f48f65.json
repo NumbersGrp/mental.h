@@ -28,13 +28,37 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 171,
+				"line" : 213,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 192,
+				"line" : 234,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 215,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 195,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 203,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 210,
 				"parent" : 0
 			},
 			{
@@ -46,43 +70,25 @@
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 162,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 168,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 140,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 154,
+				"line" : 187,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 178,
+				"line" : 220,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 112,
+				"line" : 145,
 				"parent" : 0
 			},
 			{
 				"command" : 4,
 				"file" : 0,
-				"line" : 113,
+				"line" : 146,
 				"parent" : 0
 			}
 		]
@@ -133,12 +139,16 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 9,
+					"backtrace" : 10,
 					"path" : "/Users/twelvefacedjanus/Documents/mental.h/SDK"
 				},
 				{
-					"backtrace" : 10,
+					"backtrace" : 11,
 					"path" : "/Users/twelvefacedjanus/Documents/mental.h/External"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "/opt/homebrew/include/lua"
 				},
 				{
 					"backtrace" : 3,
@@ -235,16 +245,21 @@
 			},
 			{
 				"backtrace" : 5,
-				"fragment" : "libufbx_lib.a",
-				"role" : "libraries"
-			},
-			{
-				"backtrace" : 5,
-				"fragment" : "libimgui_lib.a",
+				"fragment" : "/opt/homebrew/lib/liblua5.4.dylib",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 6,
+				"fragment" : "libufbx_lib.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "libimgui_lib.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 7,
 				"fragment" : "/opt/homebrew/lib/libglfw.3.4.dylib",
 				"role" : "libraries"
 			},
@@ -253,7 +268,7 @@
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 7,
+				"backtrace" : 8,
 				"fragment" : "/opt/homebrew/lib/libGLEW.2.2.0.dylib",
 				"role" : "libraries"
 			},
@@ -276,7 +291,7 @@
 	"orderDependencies" : 
 	[
 		{
-			"backtrace" : 8,
+			"backtrace" : 9,
 			"id" : "mental_engine::@6890427a1f51a3e7e1df"
 		}
 	],

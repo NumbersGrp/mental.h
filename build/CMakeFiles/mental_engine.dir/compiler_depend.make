@@ -610,6 +610,7 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cctype \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cerrno \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cfloat \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/climits \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/clocale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cmath \
@@ -631,6 +632,7 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/format \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/functional \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/initializer_list \
@@ -737,6 +739,7 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_set.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_setsize.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fd_zero.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_filesec_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsblkcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsfilcnt_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_gid_t.h \
@@ -760,6 +763,7 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_pid_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_s_ifmt.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_seek_set.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigaltstack.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h \
@@ -789,6 +793,7 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/qos.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/resource.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/signal.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stat.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/types.h \
@@ -830,6 +835,7 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
   /Users/twelvefacedjanus/Documents/mental.h/SDK/Utils/Utils.hpp \
   /Users/twelvefacedjanus/Documents/mental.h/SDK/Objects/Environment.hpp \
   /Users/twelvefacedjanus/Documents/mental.h/SDK/Objects/Object.hpp \
+  /Users/twelvefacedjanus/Documents/mental.h/SDK/Objects/Script.hpp \
   /Users/twelvefacedjanus/Documents/mental.h/SDK/Objects/Texture.hpp \
   /Users/twelvefacedjanus/Documents/mental.h/SDK/Objects/World.hpp \
   /Users/twelvefacedjanus/Documents/mental.h/SDK/Renderer/Renderer.hpp \
@@ -1146,8 +1152,18 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
   /opt/homebrew/include/glm/vec2.hpp \
   /opt/homebrew/include/glm/vec3.hpp \
   /opt/homebrew/include/glm/vec4.hpp \
-  /opt/homebrew/include/glm/vector_relational.hpp
+  /opt/homebrew/include/glm/vector_relational.hpp \
+  /opt/homebrew/include/lua/lauxlib.h \
+  /opt/homebrew/include/lua/lua.h \
+  /opt/homebrew/include/lua/luaconf.h \
+  /opt/homebrew/include/lua/lualib.h
 
+
+/opt/homebrew/include/lua/lualib.h:
+
+/opt/homebrew/include/lua/luaconf.h:
+
+/opt/homebrew/include/lua/lua.h:
 
 /opt/homebrew/include/glm/packing.hpp:
 
@@ -1425,15 +1441,13 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale/___wctype.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_cv_quals.h:
+/opt/homebrew/include/glm/detail/compute_vector_relational.hpp:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/is_valid_range.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wchar.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wctype.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/default_searcher.h:
 
@@ -1493,6 +1507,8 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigaltstack.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_s_ifmt.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_map:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rsize_t.h:
@@ -1524,8 +1540,6 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_gid_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/float.h:
 
@@ -1649,6 +1663,8 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_filesec_t.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/stack.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/optional:
@@ -1668,6 +1684,12 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/ostream.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_gid_t.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/format:
 
@@ -1710,6 +1732,8 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__verbose_abort:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__vector/vector_bool.h:
+
+/opt/homebrew/include/lua/lauxlib.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/back_insert_iterator.h:
 
@@ -1885,8 +1909,6 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_fundamental.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/time.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_function.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_key_t.h:
@@ -1920,6 +1942,12 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_const.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wchar.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_cv_quals.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/is_valid_range.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/byte.h:
 
@@ -2032,6 +2060,8 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/tuple_indices.h:
 
 /opt/homebrew/include/glm/ext/vector_int2.hpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stat.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/forward.h:
 
@@ -2301,9 +2331,13 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__compare/compare_three_way.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/pad_and_output.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iter_move.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__locale_dir/pad_and_output.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/wrap_iter.h:
 
@@ -2494,6 +2528,8 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/construct_at.h:
 
 /opt/homebrew/include/glm/ext/vector_float1_precision.hpp:
+
+/Users/twelvefacedjanus/Documents/mental.h/SDK/Objects/Script.hpp:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/incrementable_traits.h:
 
@@ -2717,8 +2753,6 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/three_way_comp_ref_type.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wctype.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/popcount.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/support/pthread.h:
@@ -2859,8 +2893,6 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/make_unsigned.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/signal.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/support.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/search.h:
@@ -2959,6 +2991,8 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/remove_copy.h:
@@ -3050,10 +3084,6 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Docume
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/count.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/none_of.h:
-
-/opt/homebrew/include/glm/detail/compute_vector_relational.hpp:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xlocale.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy_move_common.h:
 

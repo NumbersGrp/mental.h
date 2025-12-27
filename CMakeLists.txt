@@ -18,6 +18,32 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
 # Find required packages
 find_package(OpenGL REQUIRED)
 
+# Find Lua
+find_package(Lua QUIET)
+if(NOT LUA_FOUND)
+    find_package(PkgConfig QUIET)
+    if(PkgConfig_FOUND)
+        pkg_check_modules(LUA lua5.4 lua5.3 lua5.2 lua5.1 lua)
+    endif()
+endif()
+
+# If still not found, try to find it manually on macOS
+if(NOT LUA_FOUND AND APPLE)
+    find_path(LUA_INCLUDE_DIR lua.h
+        PATHS /opt/homebrew/opt/lua/include/lua5.4
+              /opt/homebrew/opt/lua/include/lua
+              /usr/local/opt/lua/include/lua5.4
+              /usr/local/opt/lua/include/lua
+    )
+    find_library(LUA_LIBRARIES lua
+        PATHS /opt/homebrew/opt/lua/lib
+              /usr/local/opt/lua/lib
+    )
+    if(LUA_INCLUDE_DIR AND LUA_LIBRARIES)
+        set(LUA_FOUND TRUE)
+    endif()
+endif()
+
 # Try to find GLFW using different methods
 find_package(glfw3 QUIET)
 if(NOT glfw3_FOUND)
@@ -108,6 +134,13 @@ if(NOT glm_FOUND AND NOT GLM_FOUND)
                         "  Fedora: sudo dnf install glm-devel")
 endif()
 
+if(NOT LUA_FOUND)
+    message(FATAL_ERROR "Lua not found. Please install Lua:\n"
+                        "  macOS: brew install lua\n"
+                        "  Ubuntu/Debian: sudo apt-get install liblua5.4-dev\n"
+                        "  Fedora: sudo dnf install lua-devel")
+endif()
+
 # Include directories
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/SDK)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/External)
@@ -162,6 +195,15 @@ if(glm_FOUND AND TARGET glm::glm)
     target_link_libraries(MentalSDK PUBLIC glm::glm)
 elseif(GLM_FOUND)
     target_include_directories(MentalSDK PUBLIC ${GLM_INCLUDE_DIRS})
+endif()
+
+# Link Lua
+if(LUA_FOUND AND LUA_LIBRARIES)
+    target_include_directories(MentalSDK PUBLIC ${LUA_INCLUDE_DIR})
+    target_link_libraries(MentalSDK PUBLIC ${LUA_LIBRARIES})
+elseif(LUA_FOUND)
+    target_include_directories(MentalSDK PUBLIC ${LUA_INCLUDE_DIRS})
+    target_link_libraries(MentalSDK PUBLIC ${LUA_LIBRARIES})
 endif()
 
 # Link ufbx and imgui

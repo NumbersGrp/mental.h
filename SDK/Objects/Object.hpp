@@ -13,6 +13,7 @@
 #include "Texture.hpp"
 #include "Environment.hpp"
 #include "../Renderer/Shader.hpp"
+#include "Script.hpp"
 
 namespace mentalsdk
 {
@@ -44,8 +45,11 @@ private:
 
     std::unique_ptr<CMentalShader> shader_ = nullptr;
     std::unique_ptr<CMentalTexture> texture_ = nullptr;
+    std::unique_ptr<CMentalScript> script_ = nullptr;
 
     MentalEnvironmentType environmentType_ = MentalEnvironmentType::ClearColor;
+    
+    mutable bool scriptInitialized_ = false; // Flag to track if script init was called
 
 public:
     explicit CMentalObject(std::string name_ = "Undefined node", CMentalObjectType type_ = CMentalObjectType::Triangle)
@@ -166,6 +170,19 @@ public:
         }
     }
 
+    void connectShader(const std::string& vertexShaderPath, const std::string& fragmentShaderPath) {
+        this->shader_ = std::make_unique<CMentalShader>(vertexShaderPath, fragmentShaderPath);
+    }
+
+    void connectScript(const std::string& scriptPath) {
+        this->script_ = std::make_unique<CMentalScript>(scriptPath);
+        this->scriptInitialized_ = false; // Reset initialization flag when connecting new script
+    }
+
+    void resetScriptInitialization() {
+        this->scriptInitialized_ = false;
+    }
+
     bool loadFromFile(const std::string& filePath);
 
     void setShader(std::unique_ptr<CMentalShader> shader) { 
@@ -174,6 +191,39 @@ public:
     void setTexture(std::unique_ptr<CMentalTexture> texture) { this->texture_ = std::move(texture); }
     
     void render(const glm::mat4& model, const glm::mat4& view, const glm::mat4& projection) const {
+        // Call script functions if script is available
+        if (script_ && script_->hasScript()) {
+            // Call init only once
+            if (!scriptInitialized_) {
+                script_->callInit();
+                scriptInitialized_ = true;
+            }
+            
+            // Pass current transform to script
+            script_->setObjectTransform(position_, rotation_, scale_);
+            
+            // Call update every frame
+            script_->callUpdate();
+            
+            // Get updated transforms from script (if available)
+            float scriptRotation = script_->getRotationFromScript();
+            if (scriptRotation != 0.0f) {
+                // Apply rotation around Y axis
+                const_cast<CMentalObject*>(this)->rotation_.y = scriptRotation;
+            }
+            
+            // Try to get position and scale from script as well
+            glm::vec3 scriptPosition = script_->getPositionFromScript();
+            if (scriptPosition != glm::vec3(0.0f)) {
+                const_cast<CMentalObject*>(this)->position_ = scriptPosition;
+            }
+            
+            glm::vec3 scriptScale = script_->getScaleFromScript();
+            if (scriptScale != glm::vec3(1.0f)) {
+                const_cast<CMentalObject*>(this)->scale_ = scriptScale;
+            }
+        }
+        
         if (!shader_ || !shader_->isValid()) {
             std::cerr << "Warning: No valid shader for object rendering\n";
             return; // No shader or invalid shader, can't render
@@ -185,8 +235,11 @@ public:
         // Use the shader
         shader_->use();
         
+        // Calculate model matrix with current transformations
+        glm::mat4 objectModel = getTransformMatrix();
+        
         // Set matrices
-        shader_->setMat4("model", model);
+        shader_->setMat4("model", objectModel);
         shader_->setMat4("view", view);
         shader_->setMat4("projection", projection);
         

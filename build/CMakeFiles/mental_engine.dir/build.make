@@ -76,15 +76,15 @@ CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: CMakeFiles/mental_engine.dir/f
 CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp
 CMakeFiles/mental_engine.dir/Engine/mental.cpp.o: CMakeFiles/mental_engine.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/twelvefacedjanus/Documents/mental.h/Build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mental_engine.dir/Engine/mental.cpp.o"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mental_engine.dir/Engine/mental.cpp.o -MF CMakeFiles/mental_engine.dir/Engine/mental.cpp.o.d -o CMakeFiles/mental_engine.dir/Engine/mental.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mental_engine.dir/Engine/mental.cpp.o -MF CMakeFiles/mental_engine.dir/Engine/mental.cpp.o.d -o CMakeFiles/mental_engine.dir/Engine/mental.cpp.o -c /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp
 
 CMakeFiles/mental_engine.dir/Engine/mental.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mental_engine.dir/Engine/mental.cpp.i"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp > CMakeFiles/mental_engine.dir/Engine/mental.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp > CMakeFiles/mental_engine.dir/Engine/mental.cpp.i
 
 CMakeFiles/mental_engine.dir/Engine/mental.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mental_engine.dir/Engine/mental.cpp.s"
-	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp -o CMakeFiles/mental_engine.dir/Engine/mental.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/twelvefacedjanus/Documents/mental.h/Engine/mental.cpp -o CMakeFiles/mental_engine.dir/Engine/mental.cpp.s
 
 # Object files for target mental_engine
 mental_engine_OBJECTS = \
@@ -97,6 +97,7 @@ mental_engine: CMakeFiles/mental_engine.dir/Engine/mental.cpp.o
 mental_engine: CMakeFiles/mental_engine.dir/build.make
 mental_engine: libMentalSDK.a
 mental_engine: /opt/homebrew/lib/libglm.dylib
+mental_engine: /opt/homebrew/lib/liblua5.4.dylib
 mental_engine: libufbx_lib.a
 mental_engine: libimgui_lib.a
 mental_engine: /opt/homebrew/lib/libglfw.3.4.dylib
